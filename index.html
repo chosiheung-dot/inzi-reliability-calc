@@ -190,6 +190,8 @@ table.data-table tr:last-child td { border-bottom: none; }
 .metric-card .m-label { font-size: 12.5px; color: var(--text-sub); margin-bottom: 6px; }
 .metric-card .m-value { font-size: 22px; font-weight: 700; color: var(--blue-dark); }
 .metric-card .m-unit { font-size: 13px; font-weight: 500; color: var(--text-sub); margin-left: 3px; }
+.metric-card .m-ci { font-size: 11px; color: var(--text-sub); margin-top: 5px; line-height: 1.4; }
+.metric-card .m-ci b { color: var(--blue-dark); font-weight: 600; }
 
 details.expander {
   border: 1px solid var(--border);
@@ -254,6 +256,122 @@ table.data-table tbody tr.clickable:hover { background: #f5f8ff; }
 
 canvas#weibullChart { width: 100% !important; max-height: 380px; }
 
+
+
+/* ===== Tab1 enhanced minimal-white UI ===== */
+.hero-card {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+  border-radius: 18px;
+  padding: 18px 18px 16px 18px;
+  box-shadow: 0 12px 28px rgba(17,24,39,0.05);
+  margin-bottom: 14px;
+}
+.metric-grid.elevated { margin-top: 10px; }
+.metric-card {
+  border-radius: 16px;
+  border: 1px solid #e8edf5;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  box-shadow: 0 8px 20px rgba(17,24,39,0.04);
+}
+.metric-label { letter-spacing: -0.01em; }
+.metric-value { letter-spacing: -0.03em; }
+.summary-card {
+  border: 1px solid #dbe7ff;
+  background: linear-gradient(135deg, #f7faff 0%, #eef4ff 100%);
+  border-radius: 16px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  box-shadow: 0 8px 20px rgba(47,111,237,0.08);
+}
+.summary-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.summary-main {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1f2937;
+  font-weight: 600;
+}
+.summary-main strong { color: var(--blue-dark); }
+.sim-card {
+  border: 1px solid var(--border);
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  margin-top: 14px;
+  box-shadow: 0 10px 26px rgba(17,24,39,0.05);
+}
+.sim-head {
+  display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:14px;
+}
+.sim-title { font-size: 17px; font-weight: 700; color: #111827; }
+.sim-sub { font-size: 13px; color: var(--text-sub); margin-top: 4px; }
+.pill-badge {
+  background:#eef4ff; color:var(--blue-dark); border:1px solid #dbe7ff; border-radius:999px;
+  padding:6px 10px; font-size:12px; font-weight:700; white-space:nowrap;
+}
+.slider-block { margin: 14px 0 18px; }
+.slider-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; gap:12px; }
+.slider-top label { margin:0; font-weight:700; color:#374151; }
+.slider-value {
+  min-width:72px; text-align:right; font-variant-numeric: tabular-nums;
+  color:#111827; font-weight:700;
+}
+input[type=range] {
+  -webkit-appearance:none; appearance:none; width:100%; height:8px; border-radius:999px;
+  background: linear-gradient(90deg, #dbeafe 0%, #bfdbfe 100%); outline:none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance:none; appearance:none; width:20px; height:20px; border-radius:50%;
+  background:#2f6fed; border:3px solid #ffffff; box-shadow:0 4px 14px rgba(47,111,237,0.35); cursor:pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width:20px; height:20px; border-radius:50%; background:#2f6fed; border:3px solid #ffffff;
+  box-shadow:0 4px 14px rgba(47,111,237,0.35); cursor:pointer;
+}
+.sim-stats {
+  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:10px;
+}
+.sim-stat {
+  border:1px solid #edf1f7; border-radius:14px; padding:14px 14px; background:#fafcff;
+}
+.sim-stat .k { font-size:12px; color:#6b7280; margin-bottom:4px; }
+.sim-stat .v { font-size:22px; font-weight:800; color:#111827; letter-spacing:-0.03em; }
+.sim-stat .u { font-size:13px; color:#6b7280; font-weight:600; margin-left:4px; }
+.chart-card-premium {
+  border:1px solid var(--border); background:#ffffff; border-radius:20px; padding:18px;
+  box-shadow:0 14px 30px rgba(17,24,39,0.06); margin-top:16px;
+}
+.chart-head { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:12px; }
+.chart-title-wrap h3 { margin:0; font-size:18px; font-weight:800; letter-spacing:-0.02em; }
+.chart-title-wrap p { margin:6px 0 0; color:var(--text-sub); font-size:13px; }
+.chart-legend-inline { display:flex; gap:8px; flex-wrap:wrap; }
+.legend-chip {
+  display:inline-flex; align-items:center; gap:6px; border:1px solid #edf1f7; border-radius:999px;
+  padding:6px 10px; font-size:12px; color:#4b5563; background:#fff;
+}
+.legend-dot { width:10px; height:10px; border-radius:50%; display:inline-block; }
+.note-soft {
+  margin-top:10px; padding:10px 12px; border-radius:12px; background:#f8fafc; border:1px solid #eef2f7;
+  color:#475569; font-size:13px;
+}
+.btn.btn-primary {
+  box-shadow: 0 8px 18px rgba(47,111,237,0.18);
+}
+.card, .expander {
+  box-shadow: 0 8px 22px rgba(17,24,39,0.035);
+}
+@media (max-width: 980px) {
+  .sim-stats { grid-template-columns:1fr; }
+  .chart-head, .sim-head { flex-direction:column; align-items:flex-start; }
+}
+
 </style>
 </head>
 <body>
@@ -277,6 +395,10 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
   <p class="section-note">※ 사이클(열충격) 시험이 아닌, 단일 온도 유지 시험(정특성)에 적용합니다.</p>
   <div class="grid-2col">
     <div>
+      <div class="btn-row" style="margin-bottom:14px;">
+        <button class="btn btn-primary" onclick="tab1Calculate()">계산 실행 ▶</button>
+        <button class="btn" onclick="tab1ExportExcel()">엑셀로 내보내기 📊</button>
+      </div>
       <div class="card">
         <div class="card-title">입력값</div>
         <div class="field-row">
@@ -325,18 +447,56 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
         </div>
       </div>
 
-      <div class="btn-row">
-        <button class="btn btn-primary" onclick="tab1Calculate()">계산 실행 ▶</button>
-        <button class="btn" onclick="tab1ExportExcel()">엑셀로 내보내기 📊</button>
-      </div>
     </div>
 
     <div>
       <h2 class="section-title">결과</h2>
-      <div id="t1_result" class="result-banner info">조건을 입력하고 [계산 실행]을 눌러주세요.</div>
-      <div id="t1_metrics"></div>
+      <div class="hero-card">
+        <div id="t1_result" class="result-banner info">조건을 입력하고 [계산 실행]을 눌러주세요.</div>
+        <div id="t1_metrics" class="metric-grid elevated"></div>
+      </div>
+      <div id="t1_summaryCard" class="summary-card" style="display:none;">
+        <div class="summary-kicker">quick insight</div>
+        <div id="t1_summary" class="summary-main"></div>
+      </div>
+      <div id="t1_simCard" class="sim-card" style="display:none;">
+        <div class="sim-head">
+          <div>
+            <div class="sim-title">빠른 시뮬레이션</div>
+            <div class="sim-sub">기준 조건(조건 목록 첫 번째 행)을 다른 시험온도에서 재현하려면 실제 몇 시간이 필요한지 확인하세요.</div>
+          </div>
+          <div class="pill-badge">실시간 반영</div>
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><label for="t1_sim_temp">시뮬레이션 시험온도</label><div class="slider-value"><span id="t1_sim_temp_val">125</span> ℃</div></div>
+          <input type="range" id="t1_sim_temp" min="40" max="180" step="1" value="125" oninput="updateT1Simulation()">
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><label for="t1_sim_e">활성화에너지 E</label><div class="slider-value"><span id="t1_sim_e_val">0.80</span> eV</div></div>
+          <input type="range" id="t1_sim_e" min="0.20" max="1.60" step="0.01" value="0.80" oninput="updateT1Simulation()">
+        </div>
+        <div class="sim-stats">
+          <div class="sim-stat"><div class="k">재현 필요 시험시간</div><div class="v"><span id="t1_sim_hours">-</span><span class="u">h</span></div></div>
+          <div class="sim-stat"><div class="k">기준 조건 대비 시간 변화</div><div class="v"><span id="t1_sim_saving">-</span><span class="u">%</span></div></div>
+        </div>
+      </div>
       <div id="t1_detail" class="detail-list"></div>
-      <details class="expander">
+      <div class="chart-card-premium" id="t1_chartCard" style="display:none;">
+        <div class="chart-head">
+          <div class="chart-title-wrap">
+            <h3>온도별 필요 시험시간 곡선</h3>
+            <p>기준 조건을 다른 시험온도에서 재현할 때 필요한 실제 시험시간 변화를 보여줍니다. 온도가 높아질수록 일반적으로 시간이 줄어듭니다.</p>
+          </div>
+          <div class="chart-legend-inline">
+            <span class="legend-chip"><span class="legend-dot" style="background:#2f6fed"></span> 재현 필요시간 곡선</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#ef4444"></span> 현재 조건</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#0ea5e9"></span> 시뮬레이션 지점</span>
+          </div>
+        </div>
+        <div style="position:relative;height:320px;"><canvas id="t1_chart"></canvas></div>
+        <div id="t1_chartNote" class="note-soft"></div>
+      </div>
+<details class="expander">
         <summary>📐 계산 공식 (Arrhenius Model)</summary>
         <div class="expander-body">AF = exp[ (E / k) x (1/Tu - 1/Ta) ]
 여기서  AF : 가속계수
@@ -355,9 +515,13 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
 
 <div id="tab2" class="tab-panel">
   <h2 class="section-title">② 온습도가속 (Arrhenius-Peck Model)</h2>
-  <p class="section-note gray">&nbsp;</p>
+  <p class="section-note gray">※ 온도와 습도를 함께 가속하는 시험(고온고습 시험 등)에 적용합니다.</p>
   <div class="grid-2col">
     <div>
+      <div class="btn-row" style="margin-bottom:14px;">
+        <button class="btn btn-primary" onclick="tab2Calculate()">계산 실행 ▶</button>
+        <button class="btn" onclick="tab2ExportExcel()">엑셀로 내보내기 📊</button>
+      </div>
       <div class="card">
         <div class="card-title">입력값</div>
         <div class="condition-grid" style="margin-bottom:12px;">
@@ -409,18 +573,55 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
           <div class="field-row"><label>형상모수 β</label><input type="text" id="t2_beta" value="2"></div>
         </div>
       </div>
-
-      <div class="btn-row">
-        <button class="btn btn-primary" onclick="tab2Calculate()">계산 실행 ▶</button>
-        <button class="btn" onclick="tab2ExportExcel()">엑셀로 내보내기 📊</button>
-      </div>
     </div>
 
     <div>
       <h2 class="section-title">결과</h2>
-      <div id="t2_result" class="result-banner info">조건을 입력하고 [계산 실행]을 눌러주세요.</div>
-      <div id="t2_metrics"></div>
+      <div class="hero-card">
+        <div id="t2_result" class="result-banner info">조건을 입력하고 [계산 실행]을 눌러주세요.</div>
+        <div id="t2_metrics" class="metric-grid elevated"></div>
+      </div>
+      <div id="t2_summaryCard" class="summary-card" style="display:none;">
+        <div class="summary-kicker">quick insight</div>
+        <div id="t2_summary" class="summary-main"></div>
+      </div>
+      <div id="t2_simCard" class="sim-card" style="display:none;">
+        <div class="sim-head">
+          <div>
+            <div class="sim-title">빠른 시뮬레이션</div>
+            <div class="sim-sub">기준 조건(조건 목록 첫 번째 행)을 다른 가속온도/습도에서 재현하려면 실제 몇 시간이 필요한지 확인하세요.</div>
+          </div>
+          <div class="pill-badge">실시간 반영</div>
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><label for="t2_sim_ta">시뮬레이션 가속온도</label><div class="slider-value"><span id="t2_sim_ta_val">85</span> ℃</div></div>
+          <input type="range" id="t2_sim_ta" min="40" max="150" step="1" value="85" oninput="t2_simTouched=true; updateT2Simulation()">
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><label for="t2_sim_ha">시뮬레이션 가속습도</label><div class="slider-value"><span id="t2_sim_ha_val">85</span> %RH</div></div>
+          <input type="range" id="t2_sim_ha" min="30" max="100" step="1" value="85" oninput="t2_simTouched=true; updateT2Simulation()">
+        </div>
+        <div class="sim-stats">
+          <div class="sim-stat"><div class="k">재현 필요 시험시간</div><div class="v"><span id="t2_sim_hours">-</span><span class="u">h</span></div></div>
+          <div class="sim-stat"><div class="k">기준 조건 대비 시간 변화</div><div class="v"><span id="t2_sim_saving">-</span><span class="u">%</span></div></div>
+        </div>
+      </div>
       <div id="t2_detail" class="detail-list"></div>
+      <div class="chart-card-premium" id="t2_chartCard" style="display:none;">
+        <div class="chart-head">
+          <div class="chart-title-wrap">
+            <h3>가속온도별 등가(필드)시험시간 변환 곡선</h3>
+            <p>기준 조건을 다른 가속온도에서 재현할 때(습도는 기준값으로 고정) 필요한 실제 시험시간 변화를 보여줍니다.</p>
+          </div>
+          <div class="chart-legend-inline">
+            <span class="legend-chip"><span class="legend-dot" style="background:#2f6fed"></span> 필요 시험시간 곡선</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#e2483a"></span> 입력한 시험조건</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#0ea5e9"></span> 시뮬레이션 지점</span>
+          </div>
+        </div>
+        <div style="position:relative;height:320px;"><canvas id="t2_chart"></canvas></div>
+        <div id="t2_chartNote" class="note-soft"></div>
+      </div>
       <details class="expander">
         <summary>📐 계산 공식 (Arrhenius-Peck Model)</summary>
         <div class="expander-body">AF = Lu/La = exp[(E/k) x (1/Tu - 1/Ta)] x (Hu/Ha)^(-n)
@@ -446,6 +647,10 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
   <p class="section-note">※ 챔버 승온형 온도사이클(Thermal Cycling) 전용입니다. (엘리베이터형 Thermal Shock 시험은 전환시간이 거의 0으로, 별도 모델이 필요합니다)</p>
   <div class="grid-2col">
     <div>
+      <div class="btn-row" style="margin-bottom:14px;">
+        <button class="btn btn-primary" onclick="tab3Calculate()">계산 실행 ▶</button>
+        <button class="btn" onclick="tab3ExportExcel()">엑셀로 내보내기 📊</button>
+      </div>
       <div class="profile-2col">
         <div class="card">
           <div class="card-title">사용조건(필드) 사이클 프로파일</div>
@@ -498,17 +703,50 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
           <div class="field-row"><label>형상모수 β</label><input type="text" id="t3_beta" value="2"></div>
         </div>
       </div>
-
-      <div class="btn-row">
-        <button class="btn btn-primary" onclick="tab3Calculate()">계산 실행 ▶</button>
-        <button class="btn" onclick="tab3ExportExcel()">엑셀로 내보내기 📊</button>
-      </div>
     </div>
 
     <div>
       <h2 class="section-title">결과</h2>
-      <div id="t3_result" class="result-banner info">프로파일을 입력하고 [계산 실행]을 눌러주세요.</div>
-      <div id="t3_metrics"></div>
+      <div class="hero-card">
+        <div id="t3_result" class="result-banner info">프로파일을 입력하고 [계산 실행]을 눌러주세요.</div>
+        <div id="t3_metrics" class="metric-grid elevated"></div>
+      </div>
+      <div id="t3_summaryCard" class="summary-card" style="display:none;">
+        <div class="summary-kicker">quick insight</div>
+        <div id="t3_summary" class="summary-main"></div>
+      </div>
+      <div id="t3_simCard" class="sim-card" style="display:none;">
+        <div class="sim-head">
+          <div>
+            <div class="sim-title">빠른 시뮬레이션</div>
+            <div class="sim-sub">시험 저온/유지시간/승하강시간은 현재 입력값으로 고정하고, 시험 고온만 바꿔가며 필요한 총 소요일수를 확인하세요.</div>
+          </div>
+          <div class="pill-badge">실시간 반영</div>
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><label for="t3_sim_high">시뮬레이션 시험 고온</label><div class="slider-value"><span id="t3_sim_high_val">125</span> ℃</div></div>
+          <input type="range" id="t3_sim_high" min="60" max="220" step="1" value="125" oninput="t3_simTouched=true; updateT3Simulation()">
+        </div>
+        <div class="sim-stats">
+          <div class="sim-stat"><div class="k">필요 총 소요일수</div><div class="v"><span id="t3_sim_days">-</span><span class="u">일</span></div></div>
+          <div class="sim-stat"><div class="k">기준 조건 대비 시간 변화</div><div class="v"><span id="t3_sim_saving">-</span><span class="u">%</span></div></div>
+        </div>
+      </div>
+      <div class="chart-card-premium" id="t3_chartCard" style="display:none;">
+        <div class="chart-head">
+          <div class="chart-title-wrap">
+            <h3>시험 고온(High Temp)에 따른 소요일수 변화 곡선</h3>
+            <p>고온을 올릴수록 ΔT가 커져 시험기간이 급격히 줄어드는 경향을 보여줍니다.</p>
+          </div>
+          <div class="chart-legend-inline">
+            <span class="legend-chip"><span class="legend-dot" style="background:#2f6fed"></span> 총 소요일수 곡선</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#e2483a"></span> 현재 입력값</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#0ea5e9"></span> 시뮬레이션 지점</span>
+          </div>
+        </div>
+        <div style="position:relative;height:320px;"><canvas id="t3_chart"></canvas></div>
+        <div id="t3_chartNote" class="note-soft"></div>
+      </div>
       <details class="expander" open>
         <summary>📐 계산 공식</summary>
         <div class="expander-body" id="t3_formula_text"></div>
@@ -520,9 +758,13 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
 
 <div id="tab4" class="tab-panel">
   <h2 class="section-title">④ Weibull 시험시간비 계산기</h2>
-  <p class="section-note gray">&nbsp;</p>
+  <p class="section-note gray">※ 신뢰도(R), 신뢰수준(CL), 샘플수(n), 형상모수(β)로부터 시험시간비를 산출합니다.</p>
   <div class="grid-2col">
     <div>
+      <div class="btn-row" style="margin-bottom:14px;">
+        <button class="btn btn-primary" onclick="tab4Calculate()">계산 실행 ▶</button>
+        <button class="btn" onclick="openWeibullRefModal()">Beta 참고DB 열기</button>
+      </div>
       <div class="card">
         <div class="card-title">입력값</div>
         <div class="field-row"><label>목표신뢰도 R</label><input type="text" id="t4_R" value="0.99"></div>
@@ -530,12 +772,49 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
         <div class="field-row"><label>샘플수 n</label><input type="text" id="t4_n" value="6"></div>
         <div class="field-row"><label>형상모수 β</label><input type="text" id="t4_beta" value="2"></div>
       </div>
-      <button class="btn btn-block" style="margin-bottom:10px;" onclick="openWeibullRefModal()">Beta 참고DB 열기</button>
-      <button class="btn btn-primary btn-block" onclick="tab4Calculate()">계산 실행 ▶</button>
     </div>
     <div>
       <h2 class="section-title">결과</h2>
-      <div id="t4_result" class="result-banner info">값을 입력하고 [계산 실행]을 눌러주세요.</div>
+      <div class="hero-card">
+        <div id="t4_result" class="result-banner info">값을 입력하고 [계산 실행]을 눌러주세요.</div>
+        <div id="t4_metrics" class="metric-grid elevated"></div>
+      </div>
+      <div id="t4_summaryCard" class="summary-card" style="display:none;">
+        <div class="summary-kicker">quick insight</div>
+        <div id="t4_summary" class="summary-main"></div>
+      </div>
+      <div id="t4_simCard" class="sim-card" style="display:none;">
+        <div class="sim-head">
+          <div>
+            <div class="sim-title">빠른 시뮬레이션</div>
+            <div class="sim-sub">샘플수(n)를 바꿔가며 시험시간비가 어떻게 변하는지 확인하세요.</div>
+          </div>
+          <div class="pill-badge">실시간 반영</div>
+        </div>
+        <div class="slider-block">
+          <div class="slider-top"><label for="t4_sim_n">시뮬레이션 샘플수 n</label><div class="slider-value"><span id="t4_sim_n_val">6</span> 개</div></div>
+          <input type="range" id="t4_sim_n" min="1" max="60" step="1" value="6" oninput="t4_simTouched=true; updateT4Simulation()">
+        </div>
+        <div class="sim-stats">
+          <div class="sim-stat"><div class="k">시험시간비</div><div class="v"><span id="t4_sim_ratio">-</span></div></div>
+          <div class="sim-stat"><div class="k">기준(n) 대비 변화</div><div class="v"><span id="t4_sim_saving">-</span><span class="u">%</span></div></div>
+        </div>
+      </div>
+      <div class="chart-card-premium" id="t4_chartCard" style="display:none;">
+        <div class="chart-head">
+          <div class="chart-title-wrap">
+            <h3>샘플수(n)에 따른 시험시간비 변화 곡선</h3>
+            <p>샘플을 더 많이 투입하면 개별 시험시간은 줄어드는 트레이드오프를 보여줍니다.</p>
+          </div>
+          <div class="chart-legend-inline">
+            <span class="legend-chip"><span class="legend-dot" style="background:#2f6fed"></span> 시험시간비 곡선</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#e2483a"></span> 현재 입력값</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#0ea5e9"></span> 시뮬레이션 지점</span>
+          </div>
+        </div>
+        <div style="position:relative;height:320px;"><canvas id="t4_chart"></canvas></div>
+        <div id="t4_chartNote" class="note-soft"></div>
+      </div>
       <details class="expander">
         <summary>📐 계산 공식</summary>
         <div class="expander-body">시험시간비 = [ (-ln CL) / (n x -ln R) ] ^ (1/β)
@@ -549,9 +828,13 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
 
 <div id="tab5" class="tab-panel">
   <h2 class="section-title">⑤ 수명데이터 분석 (Weibull)</h2>
-  <p class="section-note gray">&nbsp;</p>
+  <p class="section-note gray">※ 고장/미고장(중도절단) 데이터로부터 Weibull 분포를 적합(MLE)하고 대표수명 지표를 계산합니다.</p>
   <div class="grid-2col">
     <div>
+      <div class="btn-row" style="margin-bottom:14px;">
+        <button class="btn btn-primary" onclick="tab5Fit()">Weibull 적합(MLE) 실행 ▶</button>
+        <button class="btn" onclick="tab5ExportExcel()">엑셀로 내보내기 📊</button>
+      </div>
       <div class="card">
         <div class="card-title">고장/미고장 데이터 입력</div>
         <div class="condition-grid">
@@ -575,27 +858,29 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
           <button class="btn" onclick="tab5LoadExample()">예시데이터 불러오기</button>
         </div>
       </div>
-
-      <div class="btn-row">
-        <button class="btn btn-primary" onclick="tab5Fit()">Weibull 적합(MLE) 실행 ▶</button>
-      </div>
-      <div class="btn-row">
-        <button class="btn btn-block" onclick="tab5ExportExcel()">엑셀로 내보내기</button>
-      </div>
     </div>
 
     <div>
       <h2 class="section-title">적합 결과</h2>
-      <div id="t5_result" class="result-banner info">데이터를 입력하고 [Weibull 적합(MLE) 실행]을 눌러주세요. (고장 데이터 2개 이상 필요)</div>
+      <div style="margin:-4px 0 10px;">
+        <button class="info-btn" onclick="showInfoModal('MTTF / B10 / B1 수명 - 왜 필요한가?', mttfInfoText)">ⓘ MTTF/B10/B1 왜 필요한가?</button>
+        <button class="info-btn" onclick="showInfoModal('신뢰구간(CI)이란?', ciInfoText)">ⓘ 신뢰구간(CI)이란?</button>
+      </div>
+      <div class="field-inline" style="margin:0 0 12px;">
+        <label style="margin:0;white-space:nowrap;">신뢰구간 신뢰수준 CL(%) =</label>
+        <input type="text" id="t5_cl" value="90" style="max-width:90px;" oninput="if(t5_fitResult) tab5Fit(true)">
+        <span class="section-note gray" style="margin:0;">※ β/η/MTTF/B10/B1에 대한 근사 신뢰구간(Fisher Matrix, 로그정규 근사)</span>
+      </div>
+      <div class="hero-card">
+        <div id="t5_result" class="result-banner info">데이터를 입력하고 [Weibull 적합(MLE) 실행]을 눌러주세요. (고장 데이터 2개 이상 필요)</div>
+        <div id="t5_metrics" class="metric-grid elevated"></div>
+      </div>
+      <div id="t5_summaryCard" class="summary-card" style="display:none;">
+        <div class="summary-kicker">quick insight</div>
+        <div id="t5_summary" class="summary-main"></div>
+      </div>
       <div class="btn-row" style="margin-bottom:14px;">
         <button class="btn" style="background:var(--blue-soft);border-color:var(--blue-soft);color:var(--blue-dark);" onclick="tab5SendBetaToTab4()">이 β값을 ④ Weibull 탭으로 보내기 →</button>
-      </div>
-
-      <div class="card">
-        <div class="sub-card-title">대표수명 지표 (MTTF / B10 / B1)
-          <button class="info-btn" onclick="showInfoModal('MTTF / B10 / B1 수명 - 왜 필요한가?', mttfInfoText)">ⓘ 왜 필요한가?</button>
-        </div>
-        <div id="t5_mttf" class="detail-list">-</div>
       </div>
 
       <div class="card">
@@ -610,8 +895,18 @@ canvas#weibullChart { width: 100% !important; max-height: 380px; }
         <div id="t5_rt" class="detail-list">-</div>
       </div>
 
-      <div class="card">
-        <div class="card-title">Weibull 확률도표</div>
+      <div class="chart-card-premium" id="t5_chartCard">
+        <div class="chart-head">
+          <div class="chart-title-wrap">
+            <h3>Weibull 확률도표</h3>
+            <p>관측 데이터(고장)의 순위중앙값과 MLE 적합선을 함께 보여줍니다.</p>
+          </div>
+          <div class="chart-legend-inline">
+            <span class="legend-chip"><span class="legend-dot" style="background:#2f6fed"></span> 관측 데이터(고장)</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:#e2483a"></span> MLE 적합선</span>
+            <span class="legend-chip"><span class="legend-dot" style="background:rgba(226,72,58,0.55)"></span> 신뢰구간(점선)</span>
+          </div>
+        </div>
         <canvas id="weibullChart"></canvas>
       </div>
     </div>
@@ -839,6 +1134,86 @@ function weibullFailureRate(t, beta, eta) {
   return (beta / eta) * Math.pow(t / eta, beta - 1);
 }
 
+// ============================================================
+// Weibull MLE 신뢰구간(CI) 계산 - Fisher Information Matrix 기반 근사
+// ============================================================
+
+// 표준정규분포 역함수(quantile) - Acklam 근사 (|error| < 4.5e-4)
+function invNormCDF(p) {
+  if (p <= 0) return -Infinity;
+  if (p >= 1) return Infinity;
+  const a = [-3.969683028665376e+01, 2.209460984245205e+02, -2.759285104469687e+02,
+             1.383577518672690e+02, -3.066479806614716e+01, 2.506628277459239e+00];
+  const b = [-5.447609879822406e+01, 1.615858368580409e+02, -1.556989798598866e+02,
+             6.680131188771972e+01, -1.328068155288572e+01];
+  const c = [-7.784894002430293e-03, -3.223964580411365e-01, -2.400758277161838e+00,
+             -2.549732539343734e+00, 4.374664141464968e+00, 2.938163982698783e+00];
+  const d = [7.784695709041462e-03, 3.224671290700398e-01, 2.445134137142996e+00, 3.754408661907416e+00];
+  const plow = 0.02425, phigh = 1 - plow;
+  let q, r;
+  if (p < plow) {
+    q = Math.sqrt(-2 * Math.log(p));
+    return (((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5]) /
+           ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1);
+  } else if (p <= phigh) {
+    q = p - 0.5; r = q*q;
+    return (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q /
+           (((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1);
+  } else {
+    q = Math.sqrt(-2 * Math.log(1 - p));
+    return -(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5]) /
+            ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1);
+  }
+}
+
+// 양측 신뢰수준 CL(%) -> z값 (예: CL=90 -> z=1.645)
+function zFromCL(clPercent) {
+  const table = { 80: 1.2816, 85: 1.4395, 90: 1.6449, 95: 1.9600, 98: 2.3263, 99: 2.5758 };
+  const key = Math.round(clPercent);
+  if (table[key] !== undefined) return table[key];
+  const p = 1 - (1 - clPercent / 100) / 2;
+  return invNormCDF(p);
+}
+
+// (logBeta, logEta) 파라미터화된 음의 로그우도함수의 Hessian을 수치적으로 구해
+// 그 역행렬(=근사 공분산행렬, Fisher Information 근사)을 반환. 특이행렬이면 null.
+function weibullHessianCov(times, isFailure, beta, eta) {
+  const logBeta = Math.log(beta), logEta = Math.log(eta);
+  const h = 1e-3;
+  const f = (lb, le) => weibullNegLogLik([lb, le], times, isFailure);
+  const f00 = f(logBeta, logEta);
+  const fP0 = f(logBeta + h, logEta), fM0 = f(logBeta - h, logEta);
+  const f0P = f(logBeta, logEta + h), f0M = f(logBeta, logEta - h);
+  const fPP = f(logBeta + h, logEta + h), fPM = f(logBeta + h, logEta - h);
+  const fMP = f(logBeta - h, logEta + h), fMM = f(logBeta - h, logEta - h);
+  const H11 = (fP0 - 2 * f00 + fM0) / (h * h);
+  const H22 = (f0P - 2 * f00 + f0M) / (h * h);
+  const H12 = (fPP - fPM - fMP + fMM) / (4 * h * h);
+  const det = H11 * H22 - H12 * H12;
+  if (!(det > 0) || !isFinite(det) || !(H11 > 0)) return null;
+  const cov00 = H22 / det, cov11 = H11 / det, cov01 = -H12 / det;
+  return [[cov00, cov01], [cov01, cov11]];
+}
+
+// 델타법(delta method, 로그정규 근사)으로 임의의 metricFn(beta, eta)에 대한 CI 계산
+// cov는 (logBeta, logEta)에 대한 공분산행렬, z는 신뢰수준에 대응하는 표준정규분포 임계값
+function weibullDeltaCI(metricFn, beta, eta, cov, z) {
+  if (!cov) return null;
+  const h = 1e-4;
+  const m0 = metricFn(beta, eta);
+  if (!(m0 > 0) || !isFinite(m0)) return null;
+  const mBp = metricFn(beta * Math.exp(h), eta), mBm = metricFn(beta * Math.exp(-h), eta);
+  const mEp = metricFn(beta, eta * Math.exp(h)), mEm = metricFn(beta, eta * Math.exp(-h));
+  if ([mBp, mBm, mEp, mEm].some(v => !(v > 0) || !isFinite(v))) return null;
+  const dB = (Math.log(mBp) - Math.log(mBm)) / (2 * h);
+  const dE = (Math.log(mEp) - Math.log(mEm)) / (2 * h);
+  const varLnM = dB * dB * cov[0][0] + dE * dE * cov[1][1] + 2 * dB * dE * cov[0][1];
+  if (!(varLnM >= 0) || !isFinite(varLnM)) return null;
+  const se = Math.sqrt(varLnM);
+  return { value: m0, lower: m0 * Math.exp(-z * se), upper: m0 * Math.exp(z * se), se };
+}
+
+
 
 const EA_DB = [["Capacitor, Aluminum Electrolytic", "0.81", "EPRI NP-6408", "Capacity Tol. 기준"], ["Capacitor, Mylar", "0.86", "EPRI NP-6408", "Capacity Tol. 기준"], ["Capacitor, Paper", "0.9", "EPRI NP-6408", "Capacity Tol. 기준"], ["Capacitor, Polycarbonate", "0.8", "EPRI NP-6408", "Capacity Tol. 기준"], ["Capacitor, Polyester", "0.86", "EPRI NP-6408", "Capacity Tol. 기준"], ["Capacitor, Tantalum", "1.27", "EPRI NP-6408", "Capacity Tol. 기준"], ["Capacitors, chlorinated diphenyl 0.5% azobenzene", "2", "EPRI NP-1558", ""], ["Capacitors, chlorinated diphenyl kraft paper", "0.86", "EPRI NP-1558", ""], ["Capacitors, chlorinated diphenyl kraft paper with 0.5% azobenzene", "1.5", "EPRI NP-1558", ""], ["Capacitors, chlorinated diphenyl kraft paper with 5% azobenzene", "1.93", "EPRI NP-1558", ""], ["Capacitors, chlorinated diphenyl. 0.5% anthraquinone", "1.53", "EPRI NP-1558", ""], ["Capacitors, chlorinated diphenyl. No stabilizers", "1.17", "EPRI NP-1558", ""], ["Capacitors, dielectric, tubular paper", "2.42", "EPRI NP-1558", ""], ["Capacitors, metalized paper", "1.32", "EPRI NP-1558", ""], ["Capacitors, titanium-titanium dioxide, thin film(@25℃-100℃)", "0.09", "EPRI NP-1558", ""], ["Coils, Class A", "1.08", "EPRI NP-6408", "Elect Str.기준"], ["Diode", "1.13", "EPRI NP-6408", "Fail Rate(MTBF) 기준"], ["Diode, others", "1.13-2.77", "EPRI NP-1558", ""], ["Diode, Si(-1960)", "1.14", "EPRI NP-1558", ""], ["Diode, Si-general", "1.13-2.77", "EPRI NP-1558", ""], ["Diode, Silicon, 1N673 & 1N696", "1.8", "EPRI NP-1558", ""], ["Diode, varactors", "2.31-2.38", "EPRI NP-1558", ""], ["Diodes, silicon, p-n-p-n", "1.41", "EPRI NP-1558", ""], ["Diodes, silicon, varactors", "2.31-2.38", "EPRI NP-1558", ""], ["Fuse, Ceramic", "3.91", "EPRI NP-6408", "Mech Creep 기준"], ["Fuse, Glass", "3.91", "EPRI NP-6408", "Mech Creep 기준"], ["IC", "1", "EPRI NP-6408", "Fail Rate(MTBF) 기준"], ["IC(Surface charge accumulation)", "1.0-1.05", "David J. Klinger, et al.", "AT&T Reliability Manual, Van Nostrand Reinhold, 1990"], ["IC(Charge injection)", "1.3", "David J. Klinger, et al.", "AT&T Reliability Manual, Van Nostrand Reinhold, 1990"], ["IC(Electromigration)", "0.5-1.2", "David J. Klinger, et al.", "AT&T Reliability Manual, Van Nostrand Reinhold, 1990"], ["IC(Corrosion)", "0.3-0.6", "David J. Klinger, et al.", "AT&T Reliability Manual, Van Nostrand Reinhold, 1990"], ["IC(Intermetallic growth)", "1.0-1.05", "David J. Klinger, et al.", "AT&T Reliability Manual, Van Nostrand Reinhold, 1990"], ["IC(Aluminum penetration into silicon)", "1.4-1.6", "David J. Klinger, et al.", "AT&T Reliability Manual, Van Nostrand Reinhold, 1990"], ["IC(SiO2중의 Na이온의 드리프트)", "1.0-1.4", "마쓰다 전기", "반도체디바이스의 신뢰성기술, 일과기련, 1988"], ["IC(Si-SiO2 계면의 슬로 트래핑)", "1", "마쓰다 전기", "반도체디바이스의 신뢰성기술, 일과기련, 1988"], ["IC(반전층의 생성)", "0.8-1.0", "마쓰다 전기", "반도체디바이스의 신뢰성기술, 일과기련, 1988"], ["IC(채널 효과)", "0.5", "마쓰다 전기", "반도체디바이스의 신뢰성기술, 일과기련, 1988"], ["IC(수분에 의한 이온 이동 가속)", "0.8", "마쓰다 전기", "반도체디바이스의 신뢰성기술, 일과기련, 1988"], ["IC(Al Corrosion)", "0.6-0.9", "마쓰다 전기", "반도체디바이스의 신뢰성기술, 일과기련, 1988"], ["IC(산화막의 파괴)", "0.6", "마쓰다 전기", "반도체디바이스의 신뢰성기술, 일과기련, 1988"], ["IC(금속간 화합물 성장)", "0.5-0.7", "마쓰다 전기", "반도체디바이스의 신뢰성기술, 일과기련, 1988"], ["IC(Gate Oxide Defect)", "0.7-0.5", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Intermetallic Defect)", "0.3", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Poly to Metal Defect)", "0.3", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Silicon Junction Defect)", "0.5-0.3", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Masking(Poly, Diff.. etc.) Defect)", "0.8", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Metallization Defect)", "0.5", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Electromigration)", "1.0-0.5", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Contamination(Surface and Bulk))", "1", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Charge Loss(EPROM's))", "0.6", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Assembly(Bond, Die Att. etc.))", "0.5", "INTEL", "Components Quality and Reliability, 1991/92"], ["IC(Surface charges Inversion, Accumulation)", "1", "Motolola", "Reliability & Quality, 1993"], ["IC(Oxide Pinholes)", "1", "Motolola", "Reliability & Quality, 1993"], ["IC(Dielectric Breakdown(TDDB))", "0.3", "Motolola", "Reliability & Quality, 1993"], ["IC(Charge Loss)", "0.8", "Motolola", "Reliability & Quality, 1993"], ["IC(Electromigration, Large grain Al, glassivated)", "1", "Motolola", "Reliability & Quality, 1993"], ["IC(Electromigration, Small grain Al)", "0.5", "Motolola", "Reliability & Quality, 1993"], ["IC(Cu-Al/Cu-Si-Al sputtered)", "0.7", "Motolola", "Reliability & Quality, 1993"], ["IC(Corrosion)", "0.6-0.7", "Motolola", "Reliability & Quality, 1993"], ["IC(Intermetallic Growth)", "1", "Motolola", "Reliability & Quality, 1993"], ["IC(Metal Scratches)", "0.5-0.7", "Motolola", "Reliability & Quality, 1993"], ["IC(Silicon Defects)", "0.5", "Motolola", "Reliability & Quality, 1993"], ["IC(Mechanical wireshorts)", "0.3-0.4", "Signetics", "Reliability Handbook, 1992"], ["IC(Diffusion and Bulk Defects)", "0.3-0.4", "Signetics", "Reliability Handbook, 1992"], ["IC(Oxide Defects)", "0.3-0.4", "Signetics", "Reliability Handbook, 1992"], ["IC(Top to Bottom Metal Short)", "0.5", "Signetics", "Reliability Handbook, 1992"], ["IC(Electromigration)", "0.55", "Signetics", "Reliability Handbook, 1992"], ["IC(Charge Trapping)", "0.06", "Signetics", "Reliability Handbook, 1992"], ["IC(Electrolytic Corrosion)", "0.8-1.0", "Signetics", "Reliability Handbook, 1992"], ["IC(Au-Al Intermetallics)", "0.8-2.0", "Signetics", "Reliability Handbook, 1992"], ["IC(Au-Al Bond Degradation)", "1.0-2.2", "Signetics", "Reliability Handbook, 1992"], ["IC(Ionic Contamination)", "1.02", "Signetics", "Reliability Handbook, 1992"], ["IC(Alloy Pitting)", "1.77", "Signetics", "Reliability Handbook, 1992"], ["IC(Al electromigration)", "0.6-1.2", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Al stress migration)", "0.7-0.9", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Au-Al alloy growth)", "0.85-1.1", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Al corrosion)", "0.6-1.2", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Oxide breakdown)", "0.6-1.2", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Ion movement acceleration due to moisture)", "0.3-0.35", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Na ion drift in SiO2)", "0.8", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Slow trapping of Si-SiO2 Interface)", "1.0-1.4", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Inversion layer formation)", "1", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["IC(Na ion drift in SiO2)", "0.8-1.0", "Toshiba", "Semiconductor Reliability Handbook(Integrated Circuit), 1992"], ["Microcircuits, CMOS 4007 freak pop.", "0.9", "EPRI NP-1558", ""], ["Microcircuits, CMOS 4008 main pop.", "1.3", "EPRI NP-1558", ""], ["Microcircuits, CMOS type CD 4011A", "1.4", "EPRI NP-1558", ""], ["Microcircuits, CMOS type CD 4013A", "1.1", "EPRI NP-1558", ""], ["Microcircuits, CMOS type CD 4024A", "1", "EPRI NP-1558", ""], ["Optical Coupler", "1", "EPRI NP-6408", "Fail Rate(Non-op) 기준"], ["SCR", "1", "EPRI NP-5024", ""], ["semiconductor devices, silicon", "0.9-1.4", "EPRI NP-1558", ""], ["Silicon Controled Rectifier", "1", "EPRI NP-6408", "Fail Rate(MTBF) 기준"], ["Transistor Si planar4A-2(1963)", "1.5", "EPRI NP-1558", "Constant Stress"], ["Transistor Si planar4A-2(1967)", "1.18", "EPRI NP-1558", ""], ["Transistor Si planar4A-2(1968)", "1.29", "EPRI NP-1558", "Step Stress"], ["Transistor, bipolar, p-n-p-n", "1.65", "EPRI NP-1558", ""], ["Transistor, Ge gettered", "1.24", "EPRI NP-1558", ""], ["Transistor, Ge MADT, 2N501(1958)", "1.07", "EPRI NP-1558", "MADT=Micro Alloy Diffused Transistor"], ["Transistor, Ge MADT, 2N501(1959)", "1.07", "EPRI NP-1558", ""], ["Transistor, Ge MAT, 2N393(1959, 1960)", "1", "EPRI NP-1558", "MAT=Micro Alloy Transistor"], ["Transistor, Ge mesa, 2N559(1958)", "1.17", "EPRI NP-1558", ""], ["Transistor, Ge mesa, 2N559(1959)", "0.95", "EPRI NP-1558", ""], ["Transistor, Ge mesa, 2N559(1960)", "1.14", "EPRI NP-1558", ""], ["Transistor, Ge mesa, AF106(1969)", "1", "EPRI NP-1558", ""], ["Transistor, Ge ungettered", "0.88", "EPRI NP-1558", ""], ["Transistor, modern submarine cable", "1.4", "EPRI NP-1558", ""], ["Transistor, Power, MSC 1330", "0.81", "EPRI NP-1558", ""], ["Transistor, Si mesa, 2N1051(1960)", "1.12", "EPRI NP-1558", ""], ["Transistor, Si mesa, 2N269(1961)", "0.58", "EPRI NP-1558", ""], ["Transistor, Si mesa, 2N560(1959)", "1.12", "EPRI NP-1558", ""], ["Transistor, Si mesa, 2N560(1960)", "1.5", "EPRI NP-1558", ""], ["Transistor, Si, p-n-p-n", "1.65", "EPRI NP-1558", ""], ["Transistor, Silicon, (all) at wear-out", "1.46", "EPRI NP-1558", ""], ["Transistor, Silicon, (all) before wear-out", "1.12", "EPRI NP-1558", "with surface inversion failures"], ["Transistor, silicon, bipolar", "1.02", "EPRI NP-1558", "with Au-Al bond failures"], ["Transistor, silicon, bipolar", "1.02-1.04", "EPRI NP-1558", ""], ["Transistor, silicon, bipolar", "1.77", "EPRI NP-1558", "with metal penetration into Si."], ["Transistor, silicone mesa, 2N560", "2.16", "EPRI NP-1558", ""], ["Transistor, Vycor gettered germanium, 2N559", "1.02", "EPRI NP-1558", ""], ["Transistors", "1.02", "EPRI NP-6408", "Fail Rate(MTBF) 기준"], ["Transistors", "0.66", "EPRI NP-1558", ""], ["Transistors, 2N559, vacuum baked", "0.89", "EPRI NP-1558", ""], ["Transistors, CMOS", "1.18", "EPRI NP-1558", ""], ["Transistors, diffused-germanium", "0.87", "EPRI NP-1558", "Constant stress tests with moisture getter"], ["Transistors, diffused-germanium", "1.24", "EPRI NP-1558", "Step-stress tests without moisture getter"], ["Transistors, Ge alloy, LT 123(1958)", "1.25", "EPRI NP-1558", ""], ["Transistors, Ge alloyed, OC 1972(1964)", "1.26", "EPRI NP-1558", ""], ["Transistors, Ge alloyed, OC 1972(1966)", "1.08", "EPRI NP-1558", ""], ["Transistors, germanium", "0.17", "EPRI NP-1558", ""], ["Transistors, germanium, @60℃", "0.99-1.26", "EPRI NP-1558", ""], ["Transistors, germanium, gettered with vycor or molecular sieve", "1.24", "EPRI NP-1558", ""], ["Transistors, germanium, ungettered", "0.88", "EPRI NP-1558", ""], ["Transistors, MOS", "1.1 or 1.2", "EPRI NP-1558", ""], ["Transistors, Si main pop.(1960)", "1.02", "EPRI NP-1558", ""], ["Transistors, Si planar, BFY 33(1969)", "1.12", "EPRI NP-1558", ""], ["Transistors, silicon, typical", "0.96", "EPRI NP-1558", "t10 lifeline"], ["Transistors, silicon, typical", "1.11", "EPRI NP-1558", "t50 lifeline"], ["Transistors, submarine-cable", "1.3", "EPRI NP-1558", "0.025% failure"], ["Transistors, submarine-cable", "1.24", "EPRI NP-1558", "50% failure"], ["OLED 소자", "0.3", "정보디스플레이공학(책)", ""], ["전자제품", "0.3~0.7", "기업에서 관행적 적용", ""], ["전자부품", "0.2~1.2", "기업에서 관행적 적용", ""], ["LCD", "0.6", "기업에서 관행적 적용", ""], ["노트북", "0.5", "기업에서 관행적 적용", ""], ["TV", "0.55", "기업에서 관행적 적용", ""], ["PDP module", "0.49", "기업에서 관행적 적용", ""], ["OLED module", "0.4", "기업에서 관행적 적용", ""], ["Battery Management System", "0.45", "기업에서 관행적 적용", ""], ["VCR", "0.39", "기업에서 관행적 적용", ""], ["노트북", "0.46", "기업에서 관행적 적용", ""], ["대표치(시스템 또는 모듈)", "0.5", "기업에서 관행적 적용", ""], ["Natural Rubber", "0.8", "한국화학융합시험연구원", ""], ["NBR", "0.93", "한국화학융합시험연구원", ""], ["H-NBR", "0.3", "한국화학융합시험연구원", ""], ["EPDM", "0.7-0.86", "한국화학융합시험연구원", ""], ["자동차용 전장품(대표치)", "0.8", "GMW 3172", "가속시험설계시 사용하고, 시험결과로 부터 재산출"], ["OLED 소자(시험설계/Spec 개발적용)", "0.3", "정보디스플레이공학(책)", ""], ["전자제품(시험설계/Spec 개발적용)", "0.3~0.7", "", ""], ["전자부품(시험설계/Spec 개발적용)", "0.2~1.2", "", ""], ["LCD(시험설계/Spec 개발적용)", "0.6", "", ""], ["노트북(시험설계/Spec 개발적용)", "0.5", "", ""], ["TV(시험설계/Spec 개발적용)", "0.55", "", ""], ["PDP module(시험설계/Spec 개발적용)", "0.49", "", ""], ["OLED module(시험설계/Spec 개발적용)", "0.4", "", ""], ["Battery Management System(시험설계/Spec 개발적용)", "0.45", "", ""], ["VCR(시험설계/Spec 개발적용)", "0.39", "", ""], ["노트북(시험설계/Spec 개발적용)2", "0.46", "", ""], ["대표치(시스템 또는 모듈)(시험설계/Spec 개발적용)", "0.5", "한국자동차연구원 추천", ""], ["H.Livingston (2002)", "3", "", ""], ["Brizout, et.al (1992)", "2.66", "", ""], ["Philps (@HAST)", "4.6", "", ""], ["SEMATECH", "2.7", "", ""], ["대표치(아레니우스 특성 지수)", "3", "", ""], ["정류자 다이오드(Voltage)", "2.43", "H.Livingston (2002)", ""], ["레이저 다이오드(Voltage)", "2.8", "", ""], ["NR(고무소재)", "0.74~0.84", "한국화학융합시험연구원", ""], ["EPDM(고무소재)", "0.77~0.89", "한국화학융합시험연구원", ""], ["Oxide(Failure Mechanism)", "0.8", "ADI Reliability Handbook", ""], ["Contamination(Failure Mechanism)", "1.4", "ADI Reliability Handbook", ""], ["Silicon Junction Defects(Failure Mechanism)", "0.8", "ADI Reliability Handbook", ""], ["Defect of oxide film", "0.3 eV to 1.1 eV", "Failure Mechanism of Semiconductor Devices @panasonic", ""], ["Drift of ionicity (Na ions in oxide film)", "0.3 eV to 1.8 eV", "Failure Mechanism of Semiconductor Devices @panasonic", ""], ["Slow trap", "0.8 eV to 1.2 eV", "Failure Mechanism of Semiconductor Devices @panasonic", ""], ["Electromigration disconnection", "for Al wire: 0.5 eV to 0.7 eV", "Failure Mechanism of Semiconductor Devices @panasonic", ""], ["Electromigration disconnection(Cu wire)", "for Cu wire: 0.8 eV to 1.0 eV", "Failure Mechanism of Semiconductor Devices @panasonic", ""], ["Metal(Al) corrosion", "0.7 eV to 0.9 eV", "Failure Mechanism of Semiconductor Devices @panasonic", ""], ["Growth of compound between metals(Au-Al)", "1.0 eV to 1.3 eV", "Failure Mechanism of Semiconductor Devices @panasonic", ""], ["통상적인 전자소자의 활성화에너지(GM)", "0.3 eV to 1.2 eV", "", ""], ["전장품의 활성화에너지(시험설계 시 Spec 개발 적용)", "0.8 eV", "", ""], ["서하이 자동차의 활성화에너지(시험설계 시 SPEC 개발, VW참고)", "0.45 eV", "", ""]];
 const WEIBULL_DB = [["Components", "Ball bearings", 0.7, 1.3, 3.5, 14000.0, 40000.0, 250000.0], ["Components", "Roller bearings", 0.7, 1.3, 3.5, 9000.0, 50000.0, 125000.0], ["Components", "Sleeve bearing", 0.7, 1.0, 3.0, 10000.0, 50000.0, 143000.0], ["Components", "Belts, drive", 0.5, 1.2, 2.8, 9000.0, 30000.0, 91000.0], ["Components", "Bellows, hydraulic", 0.5, 1.3, 3.0, 14000.0, 50000.0, 100000.0], ["Components", "Bolts", 0.5, 3.0, 10.0, 125000.0, 300000.0, 100000000.0], ["Components", "Clutches, friction", 0.5, 1.4, 3.0, 67000.0, 100000.0, 500000.0], ["Components", "Clutches, magnetic", 0.8, 1.0, 1.6, 100000.0, 150000.0, 333000.0], ["Components", "Couplings", 0.8, 2.0, 6.0, 25000.0, 75000.0, 333000.0], ["Components", "Couplings, gear", 0.8, 2.5, 4.0, 25000.0, 75000.0, 1250000.0], ["Components", "Cylinders, hydraulic", 1.0, 2.0, 3.8, 9000000.0, 900000.0, 200000000.0], ["Components", "Diaphragm, metal", 0.5, 3.0, 6.0, 50000.0, 65000.0, 500000.0], ["Components", "Diaphragm, rubber", 0.5, 1.1, 1.4, 50000.0, 60000.0, 300000.0], ["Components", "Gaskets, hydraulics", 0.5, 1.1, 1.4, 700000.0, 75000.0, 3300000.0], ["Components", "Filter, oil", 0.5, 1.1, 1.4, 20000.0, 25000.0, 125000.0], ["Components", "Gears", 0.5, 2.0, 6.0, 33000.0, 75000.0, 500000.0], ["Components", "Impellers, pumps", 0.5, 2.5, 6.0, 125000.0, 150000.0, 1400000.0], ["Components", "Joints, mechanical", 0.5, 1.2, 6.0, 1400000.0, 150000.0, 10000000.0], ["Components", "Knife edges, fulcrum", 0.5, 1.0, 6.0, 1700000.0, 2000000.0, 16700000.0], ["Components", "Liner, recip. comp. cyl.", 0.5, 1.8, 3.0, 20000.0, 50000.0, 300000.0], ["Components", "Nuts", 0.5, 1.1, 1.4, 14000.0, 50000.0, 500000.0], ["Components", "\"O\"-rings, elastomeric", 0.5, 1.1, 1.4, 5000.0, 20000.0, 33000.0], ["Components", "Packings, recip. comp. rod", 0.5, 1.1, 1.4, 5000.0, 20000.0, 33000.0], ["Components", "Pins", 0.5, 1.4, 5.0, 17000.0, 50000.0, 170000.0], ["Components", "Pivots", 0.5, 1.4, 5.0, 300000.0, 400000.0, 1400000.0], ["Components", "Pistons, engines", 0.5, 1.4, 3.0, 20000.0, 75000.0, 170000.0], ["Components", "Pumps, lubricators", 0.5, 1.1, 1.4, 13000.0, 50000.0, 125000.0], ["Components", "Seals, mechanical", 0.8, 1.4, 4.0, 3000.0, 25000.0, 50000.0], ["Components", "Shafts, cent. pumps", 0.8, 1.2, 3.0, 50000.0, 50000.0, 300000.0], ["Components", "Springs", 0.5, 1.1, 3.0, 14000.0, 25000.0, 5000000.0], ["Components", "Vibration mounts", 0.5, 1.1, 2.2, 17000.0, 50000.0, 200000.0], ["Components", "Wear rings, cent. pumps", 0.5, 1.1, 4.0, 10000.0, 50000.0, 90000.0], ["Components", "Valves, recip comp.", 0.5, 1.4, 4.0, 3000.0, 40000.0, 80000.0], ["Machinery Equipment", "Circuit breakers", 0.5, 1.5, 3.0, 67000.0, 100000.0, 1400000.0], ["Machinery Equipment", "Compressors, centrifugal", 0.5, 1.9, 3.0, 20000.0, 60000.0, 120000.0], ["Machinery Equipment", "Compressor blades", 0.5, 2.5, 3.0, 400000.0, 800000.0, 1500000.0], ["Machinery Equipment", "Compressor vanes", 0.5, 3.0, 4.0, 500000.0, 1000000.0, 2000000.0], ["Machinery Equipment", "Diaphgram couplings", 0.5, 2.0, 4.0, 125000.0, 300000.0, 600000.0], ["Machinery Equipment", "Gas turb. comp. blades/vanes", 1.2, 2.5, 6.6, 10000.0, 250000.0, 300000.0], ["Machinery Equipment", "Gas turb. blades/vanes", 0.9, 1.6, 2.7, 10000.0, 125000.0, 160000.0], ["Machinery Equipment", "Motors, AC", 0.5, 1.2, 3.0, 1000.0, 100000.0, 200000.0], ["Machinery Equipment", "Motors, DC", 0.5, 1.2, 3.0, 100.0, 50000.0, 100000.0], ["Machinery Equipment", "Pumps, centrifugal", 0.5, 1.2, 3.0, 1000.0, 35000.0, 125000.0], ["Machinery Equipment", "Steam turbines", 0.5, 1.7, 3.0, 11000.0, 65000.0, 170000.0], ["Machinery Equipment", "Steam turbine blades", 0.5, 2.5, 3.0, 400000.0, 800000.0, 1500000.0], ["Machinery Equipment", "Steam turbine vanes", 0.5, 3.0, 3.0, 500000.0, 900000.0, 1800000.0], ["Machinery Equipment", "Transformers", 0.5, 1.1, 3.0, 14000.0, 200000.0, 14200000.0], ["Instrumentation", "Controllers, pneumatic", 0.5, 1.1, 2.0, 1000.0, 25000.0, 1000000.0], ["Instrumentation", "Controllers, solid state", 0.5, 0.7, 1.1, 20000.0, 100000.0, 200000.0], ["Instrumentation", "Control valves", 0.5, 1.0, 2.0, 14000.0, 100000.0, 333000.0], ["Instrumentation", "Motorized valves", 0.5, 1.1, 3.0, 17000.0, 25000.0, 1000000.0], ["Instrumentation", "Solenoid valves", 0.5, 1.1, 3.0, 50000.0, 75000.0, 1000000.0], ["Instrumentation", "Transducers", 0.5, 1.0, 3.0, 11000.0, 20000.0, 90000.0], ["Instrumentation", "Transmitters", 0.5, 1.0, 2.0, 100000.0, 150000.0, 1100000.0], ["Instrumentation", "Temperature indicators", 0.5, 1.0, 2.0, 140000.0, 150000.0, 3300000.0], ["Instrumentation", "Pressure indicators", 0.5, 1.2, 3.0, 110000.0, 125000.0, 3300000.0], ["Instrumentation", "Flow instrumentation", 0.5, 1.0, 3.0, 100000.0, 125000.0, 10000000.0], ["Instrumentation", "Level instrumentation", 0.5, 1.0, 3.0, 14000.0, 25000.0, 500000.0], ["Instrumentation", "Electro-mechanical parts", 0.5, 1.0, 3.0, 13000.0, 25000.0, 1000000.0], ["Static Equipment", "Boilers, condensers", 0.5, 1.2, 3.0, 11000.0, 50000.0, 3300000.0], ["Static Equipment", "Pressure vessels", 0.5, 1.5, 6.0, 1250000.0, 2000000.0, 33000000.0], ["Static Equipment", "Filters, strainers", 0.5, 1.0, 3.0, 5000000.0, 5000000.0, 200000000.0], ["Static Equipment", "Check valves", 0.5, 1.0, 3.0, 100000.0, 100000.0, 1250000.0], ["Static Equipment", "Relief valves", 0.5, 1.0, 3.0, 100000.0, 100000.0, 1000000.0], ["Service Liquids", "Coolants", 0.5, 1.1, 2.0, 11000.0, 15000.0, 33000.0], ["Service Liquids", "Lubricants, screw compr.", 0.5, 1.1, 3.0, 11000.0, 15000.0, 40000.0], ["Service Liquids", "Lube oils, mineral", 0.5, 1.1, 3.0, 3000.0, 10000.0, 25000.0], ["Service Liquids", "Lube oils, synthetic", 0.5, 1.1, 3.0, 33000.0, 50000.0, 250000.0], ["Service Liquids", "Greases", 0.5, 1.1, 3.0, 7000.0, 10000.0, 33000.0]];
@@ -846,6 +1221,7 @@ const M_GUIDE_DB = [["무연솔더 적용 부품 Lead-free Solder(Sn97Ag3Cu0.5)"
 const MODEL_GUIDE_TEXT = "[ 언제 어떤 모델을 써야 하나요? ]\n\n(1) Coffin-Manson (단순 모델)\n   - 반영 요소 : ΔT(온도변화폭) 크기만 반영\n   - 적합 대상 : 플라스틱 하우징 균열/박리, 금속 접합부 균열 등 (Dwell 영향이 상대적으로 작은 구조)\n   - dwell time, ramp rate 데이터가 없거나 불확실할 때도 사용\n\n(2) Modified Norris-Landzberg (정밀 모델)\n   - 반영 요소 : ΔT + 고온유지시간(Dwell) + 승온속도(Ramp) + 절대온도(Arrhenius항)\n   - 적합 대상 : 솔더 접합부(BGA/QFN 등 PCB 실장부품)의 저사이클 피로\n   - 계수(n=2.65, m=0.136, Ea/k=2185)는 Pb-free 솔더 접합 문헌 기준 근사값이므로,\n     다른 재질/구조에는 신뢰도가 낮을 수 있습니다.\n\n* 판정 기준은 원칙적으로 '사이클 수' 입니다. 소요시간(분/시간/일)은 시험 스케줄링 참고용입니다.\n* 시험온도는 부품 정격범위, 유리전이온도(Tg), 솔더 융점을 넘지 않아야 하며,\n  유지시간은 DUT 내부/접합부 온도가 실제로 안정화되는 시간(통상 10~15분 이상) 이상이어야 합니다.";
 const mttfInfoText = "β(형상모수)와 η(척도모수)만으로는 '이 제품이 실제로 몇 시간/사이클을 버티는지'가 바로 감이 오지 않기 때문에, 실무에서 바로 쓸 수 있는 대표수명값으로 변환한 지표입니다.\n\n· MTTF (평균수명)\n  전체 제품의 평균적인 고장 시점입니다. '평균적으로 이 정도 시간에 고장난다'는 의미이며,\n  설계수명과 비교해 여유(마진)가 있는지 확인하는 데 씁니다.\n\n· B10 수명\n  전체 중 10%가 고장 나는 시점입니다. 자동차/전자부품 업계에서 널리 쓰이는\n  표준 신뢰성 판정 지표로, '고객에게 보증할 수명'을 정할 때 기준으로 많이 사용합니다.\n\n· B1 수명\n  전체 중 1%가 고장 나는 시점입니다. B10보다 더 보수적인(엄격한) 기준이며,\n  안전과 직결되는 부품이나 높은 신뢰성이 요구되는 부품에 사용합니다.\n\n즉 세 지표 모두 β/η 모델을 '몇 % 고장 시점이 언제인지'로 쉽게 풀어서\n리포트나 고객 스펙 비교에 바로 활용할 수 있게 해주는 값입니다.";
 const rtInfoText = "이 계산은 '시험을 얼마나 오래 했는지'와는 무관하게, 사용자가 알고 싶은\n특정 시점(t) 하나를 골라서 그 시점의 신뢰도를 계산해주는 기능입니다.\n\n예를 들어 시험 데이터를 1500시간까지 수집해 β/η을 추정해 놓은 상태에서:\n  · t=200을 입력하면 → '200시간 시점까지 생존할 확률'\n  · t=1500을 입력하면 → '시험 종료 시점까지 생존할 확률'\n  · t=87600(필드수명 10년)을 입력하면 → '실제 필드수명 시점에서의 예상 생존율'\n을 즉시 확인할 수 있습니다.\n\n실무에서는 초기불량 구간(짧은 t) 확인, 시험 통과 확률의 사후 검증(시험시간과 같은 t),\n그리고 필드 목표수명 시점의 신뢰도 예측(긴 t) 등의 용도로 가장 많이 사용합니다.\n\n※ 주의: t가 실제 관측한 데이터 범위를 크게 벗어나면(외삽, extrapolation)\n모델의 예측 오차가 커질 수 있으므로, 참고값으로만 활용하시기 바랍니다.";
+const ciInfoText = "신뢰구간(Confidence Interval, CI)은 적은 샘플수로 추정한 \u03b2(형상모수)·\u03b7(척도모수)와 이로부터 계산된 MTTF/B10/B1이 '실제 참값'에서 얼마나 벗어날 수 있는지를 나타내는 범위입니다.\n\n· 표본이 적을수록(샘플수가 적을수록) 구간이 넓어지고, 표본이 많을수록 좁아집니다.\n· 예: 90% CI라면 '같은 방식으로 시험을 반복했을 때 100번 중 90번은 이 구간 안에 실제 값이 들어있다'는 의미입니다.\n· 본 계산은 MLE(최대우도추정)의 Fisher Information Matrix를 이용한 근사(Wald-type, 로그정규 근사) 방식이며, 데이터가 매우 적을 경우(고장 2~3건 등) 근사 오차가 커질 수 있습니다.\n\n신뢰수준(CL)을 높이면(예: 90%→99%) 구간이 더 넓어져 '더 보수적으로' 안전하게 값을 해석할 수 있습니다.";
 const COFFIN_FORMULA = "[Coffin-Manson Model]\n\nAF = ( ΔT_test / ΔT_field ) ^ m\n\n여기서  AF : 가속계수\n        ΔT : 온도변화폭(사이클 최고온도-최저온도)\n        m  : 재료/구조에 따른 경험적 지수 (보통 1.9~5)\n\n필요 시험 사이클수 = 필드 목표 사이클수 / AF\n1cycle 시간 = 저온유지 + 승온시간 + 고온유지 + 하강시간\n총 소요시간 = 필요 시험 사이클수 x 1cycle 시간";
 const NORRIS_FORMULA = "[Modified Norris-Landzberg Model]\n\nAF = (ΔT_test/ΔT_field)^2.65\n     x (Dwell_test/Dwell_field)^0.136\n     x (1.22 x RampRate_test^-0.0757)\n     x exp[2185 x (1/Tmax_field(K) - 1/Tmax_test(K))]\n\n여기서  Dwell : 고온유지시간,  RampRate : 승온속도(℃/분)\n        Tmax  : 사이클 최고온도(K)\n        (계수 n=2.65, m=0.136, Ea/k=2185 는 Pb-free 솔더 접합 문헌 기준 근사값)\n\n필요 시험 사이클수 = 필드 목표 사이클수 / AF\n1cycle 시간 = 저온유지 + 승온시간 + 고온유지 + 하강시간\n총 소요시간 = 필요 시험 사이클수 x 1cycle 시간";
 
@@ -991,7 +1367,8 @@ function renderMetrics(containerId, items) {
   let html = '<div class="metric-grid">';
   for (const it of items) {
     html += '<div class="metric-card"><div class="m-label">' + it.label + '</div>' +
-            '<div class="m-value">' + it.value + (it.unit ? '<span class="m-unit">' + it.unit + '</span>' : '') + '</div></div>';
+            '<div class="m-value">' + it.value + (it.unit ? '<span class="m-unit">' + it.unit + '</span>' : '') + '</div>' +
+            (it.sub ? '<div class="m-ci">' + it.sub + '</div>' : '') + '</div>';
   }
   html += '</div>';
   box.innerHTML = html;
@@ -1065,7 +1442,10 @@ function tab1Calculate() {
   }
   document.getElementById('t1_detail').textContent = detail;
 
+  drawT1Chart(rows, Tref, E, Tref);
+
   t1_last = { E, Tref, rows, total, ratio, finalTime };
+  updateT1SummaryAndSim();
 }
 var t1_last = null;
 
@@ -1084,6 +1464,52 @@ function tab1ExportExcel() {
     aoa.push(['최종 가속시험시간(h)', t1_last.finalTime]);
   }
   exportAoaToExcel(aoa, '온도가속(Arrhenius)', '온도가속_계산결과.xlsx');
+}
+
+
+function updateT1SummaryAndSim() {
+  if (!t1_last || !t1_last.rows || t1_last.rows.length === 0) return;
+  const base = t1_last.rows[0];
+  const summaryCard = document.getElementById('t1_summaryCard');
+  const summary = document.getElementById('t1_summary');
+  const simCard = document.getElementById('t1_simCard');
+  summaryCard.style.display = '';
+  simCard.style.display = '';
+
+  const tempSlider = document.getElementById('t1_sim_temp');
+  const eSlider = document.getElementById('t1_sim_e');
+  if (tempSlider) tempSlider.value = String(Math.round(t1_last.Tref));
+  if (eSlider) eSlider.value = String(Number(t1_last.E).toFixed(2));
+
+  const simHours = base.t * arrheniusAF(base.ta, parseFloat(tempSlider.value), parseFloat(eSlider.value));
+  const saving = (1 - simHours / base.t) * 100;
+  summary.innerHTML = '기준 조건 <strong>' + fmt(base.ta,1) + '℃ / ' + fmt(base.t,1) + 'h</strong>는 ' +
+    '<strong>' + fmt(parseFloat(tempSlider.value),1) + '℃</strong>에서 약 <strong>' + fmt(simHours,1) + '시간</strong> 수준입니다. ' +
+    '기존 대비 <strong>' + fmt(saving,1) + '%</strong> 시험시간 절감 효과가 있습니다.';
+  updateT1Simulation();
+}
+
+function updateT1Simulation() {
+  if (!t1_last || !t1_last.rows || t1_last.rows.length === 0) return;
+  const base = t1_last.rows[0];
+  const simTemp = parseFloat(document.getElementById('t1_sim_temp').value);
+  const simE = parseFloat(document.getElementById('t1_sim_e').value);
+  document.getElementById('t1_sim_temp_val').textContent = fmt(simTemp,0);
+  document.getElementById('t1_sim_e_val').textContent = fmt(simE,2);
+
+  const simHours = base.t / arrheniusAF(base.ta, simTemp, simE);
+  const saving = (1 - simHours / base.t) * 100;
+  document.getElementById('t1_sim_hours').textContent = fmt(simHours,1);
+  document.getElementById('t1_sim_saving').textContent = (saving >= 0 ? fmt(saving,1) + ' 단축' : fmt(Math.abs(saving),1) + ' 증가');
+
+  const summary = document.getElementById('t1_summary');
+  if (summary) {
+    summary.innerHTML = '기준 조건 <strong>' + fmt(base.ta,1) + '℃ / ' + fmt(base.t,1) + 'h</strong>를 ' +
+      '<strong>' + fmt(simTemp,1) + '℃</strong>에서 재현하려면 약 <strong>' + fmt(simHours,1) + '시간</strong>이 필요합니다. ' +
+      '기준 대비 <strong>' + (saving >= 0 ? fmt(saving,1) + '% 단축' : fmt(Math.abs(saving),1) + '% 증가') + '</strong>입니다.';
+  }
+
+  if (typeof drawT1Chart === 'function') drawT1Chart(t1_last.rows, t1_last.Tref, simE, simTemp);
 }
 
 // ============================================================
@@ -1113,6 +1539,7 @@ function tab2DeleteRow(i) { t2_conditions.splice(i, 1); tab2RenderTable(); }
 function tab2DeleteAll() { t2_conditions = []; tab2RenderTable(); }
 
 var t2_last = null;
+var t2_simTouched = false;
 function tab2Calculate() {
   if (t2_conditions.length === 0) { warn('조건을 1개 이상 추가해주세요.'); return; }
   const E = getNum('t2_E'), n = getNum('t2_n'), Tu = getNum('t2_Tu'), Hu = getNum('t2_Hu');
@@ -1154,7 +1581,10 @@ function tab2Calculate() {
   }
   document.getElementById('t2_detail').textContent = detail;
 
+  drawT2Chart(rows, Tu, Hu, E, n);
+
   t2_last = { E, n, Tu, Hu, rows, total, ratio, finalTime };
+  updateT2SummaryAndSim();
 }
 
 function tab2ExportExcel() {
@@ -1173,6 +1603,52 @@ function tab2ExportExcel() {
   }
   exportAoaToExcel(aoa, '온습도가속(Peck)', '온습도가속_계산결과.xlsx');
 }
+
+
+function updateT2SummaryAndSim() {
+  if (!t2_last || !t2_last.rows || t2_last.rows.length === 0) return;
+  const base = t2_last.rows[0];
+  const summaryCard = document.getElementById('t2_summaryCard');
+  const summary = document.getElementById('t2_summary');
+  const simCard = document.getElementById('t2_simCard');
+  summaryCard.style.display = '';
+  simCard.style.display = '';
+
+  const taSlider = document.getElementById('t2_sim_ta');
+  const haSlider = document.getElementById('t2_sim_ha');
+  if (!t2_simTouched) {
+    // 최초 진입 시에는 실사용(필드) 조건을 기본값으로 표시해 입력값(E, n 등) 변경이
+    // 바로 체감되도록 함 (기준 조건과 동일값이면 AF=1이 되어 변화가 보이지 않는 문제 방지)
+    if (taSlider) taSlider.value = String(Math.round(Math.min(150, Math.max(40, t2_last.Tu))));
+    if (haSlider) haSlider.value = String(Math.round(Math.min(100, Math.max(30, t2_last.Hu))));
+  }
+
+  updateT2Simulation();
+}
+
+function updateT2Simulation() {
+  if (!t2_last || !t2_last.rows || t2_last.rows.length === 0) return;
+  const base = t2_last.rows[0];
+  const simTa = parseFloat(document.getElementById('t2_sim_ta').value);
+  const simHa = parseFloat(document.getElementById('t2_sim_ha').value);
+  document.getElementById('t2_sim_ta_val').textContent = fmt(simTa, 0);
+  document.getElementById('t2_sim_ha_val').textContent = fmt(simHa, 0);
+
+  const simHours = base.t / peckAF(base.ta, base.ha, simTa, simHa, t2_last.E, t2_last.n);
+  const saving = (1 - simHours / base.t) * 100;
+  document.getElementById('t2_sim_hours').textContent = fmt(simHours, 1);
+  document.getElementById('t2_sim_saving').textContent = (saving >= 0 ? fmt(saving, 1) + ' 단축' : fmt(Math.abs(saving), 1) + ' 증가');
+
+  const summary = document.getElementById('t2_summary');
+  if (summary) {
+    summary.innerHTML = '기준 조건 <strong>' + fmt(base.ta,1) + '℃/' + fmt(base.ha,1) + '%RH / ' + fmt(base.t,1) + 'h</strong>를 ' +
+      '<strong>' + fmt(simTa,1) + '℃/' + fmt(simHa,1) + '%RH</strong>에서 재현하려면 약 <strong>' + fmt(simHours,1) + '시간</strong>이 필요합니다. ' +
+      '기준 대비 <strong>' + (saving >= 0 ? fmt(saving,1) + '% 단축' : fmt(Math.abs(saving),1) + '% 증가') + '</strong>입니다.';
+  }
+
+  if (typeof drawT2Chart === 'function') drawT2Chart(t2_last.rows, t2_last.Tu, t2_last.Hu, t2_last.E, t2_last.n, simTa, simHa);
+}
+
 
 
 // ============================================================
@@ -1205,6 +1681,7 @@ function tab3UpdateFormula() {
 }
 
 var t3_last = null;
+var t3_simTouched = false;
 function tab3Calculate() {
   tab3UpdateFormula();
   const field = tab3ReadProfile('t3f');
@@ -1260,7 +1737,10 @@ function tab3Calculate() {
   }
   renderMetrics('t3_metrics', metrics);
 
-  t3_last = { model, dTField, dTTest, af, needCycle, cycleTimeTest, totalHour, totalDay, ratio, finalCycle, finalHour: finalMin / 60 };
+  drawT3Chart(model, field, test, parseFloat(document.getElementById('t3_m').value));
+
+  t3_last = { model, field, test, m: parseFloat(document.getElementById('t3_m').value), targetCycle, dTField, dTTest, af, needCycle, cycleTimeTest, totalHour, totalDay, ratio, finalCycle, finalHour: finalMin / 60 };
+  updateT3SummaryAndSim();
 }
 
 function tab3ExportExcel() {
@@ -1282,6 +1762,59 @@ function tab3ExportExcel() {
   exportAoaToExcel(aoa, '열피로가속(Thermal Cycling)', '열피로가속_계산결과.xlsx');
 }
 
+function updateT3SummaryAndSim() {
+  if (!t3_last) return;
+  const summaryCard = document.getElementById('t3_summaryCard');
+  const summary = document.getElementById('t3_summary');
+  const simCard = document.getElementById('t3_simCard');
+  summaryCard.style.display = '';
+  simCard.style.display = '';
+
+  const highSlider = document.getElementById('t3_sim_high');
+  if (!t3_simTouched) {
+    // 최초 진입 시에는 시험 고온과 동일값이 아닌 필드 프로파일 고온을 기본값으로 표시해
+    // 입력값(m지수, 모델 등) 변경 효과가 바로 체감되도록 함
+    const defHigh = (t3_last.field && Math.abs(t3_last.field.high - t3_last.test.high) > 0.01)
+      ? t3_last.field.high : t3_last.test.high;
+    if (highSlider) highSlider.value = String(Math.round(Math.min(220, Math.max(60, defHigh))));
+  }
+
+  updateT3Simulation();
+}
+
+function updateT3Simulation() {
+  if (!t3_last) return;
+  const l = t3_last;
+  const simHigh = parseFloat(document.getElementById('t3_sim_high').value);
+  document.getElementById('t3_sim_high_val').textContent = fmt(simHigh, 0);
+
+  const dTTestSim = Math.abs(simHigh - l.test.low);
+  const cycleTimeTestSim = profileCycleTimeMin(l.test.low_dwell, l.test.ramp_up, l.test.high_dwell, l.test.ramp_down);
+  let afSim;
+  if (l.model === 'coffin') {
+    afSim = coffinMansonAF(l.dTField, dTTestSim, l.m);
+  } else {
+    const rampTestRate = l.test.ramp_up > 0 ? (dTTestSim / l.test.ramp_up) : 0.0001;
+    afSim = norrisLandzbergAF(l.dTField, dTTestSim, l.field.high_dwell, l.test.high_dwell, rampTestRate, l.field.high, simHigh);
+  }
+  const needCycleSim = afSim > 0 ? l.targetCycle / afSim : Infinity;
+  const totalDaySim = (needCycleSim * cycleTimeTestSim) / 60 / 24;
+  const saving = (1 - totalDaySim / l.totalDay) * 100;
+
+  document.getElementById('t3_sim_days').textContent = fmt(totalDaySim, 2);
+  document.getElementById('t3_sim_saving').textContent = (saving >= 0 ? fmt(saving,1) + ' 단축' : fmt(Math.abs(saving),1) + ' 증가');
+
+  const summary = document.getElementById('t3_summary');
+  if (summary) {
+    summary.innerHTML = '시험 고온을 <strong>' + fmt(l.test.high,1) + '℃</strong>에서 <strong>' + fmt(simHigh,1) + '℃</strong>로 조정하면 ' +
+      '필드 목표 ' + l.targetCycle + 'cycle을 만족하는 데 약 <strong>' + fmt(totalDaySim,2) + '일</strong>이 필요합니다. ' +
+      '기준 대비 <strong>' + (saving >= 0 ? fmt(saving,1) + '% 단축' : fmt(Math.abs(saving),1) + '% 증가') + '</strong>입니다.';
+  }
+
+  if (typeof drawT3Chart === 'function') drawT3Chart(l.model, l.field, l.test, l.m, simHigh);
+}
+
+
 // ============================================================
 // 탭④ Weibull 시험시간비
 // ============================================================
@@ -1293,10 +1826,59 @@ function tab4Calculate() {
     ratio = weibullTestTimeRatio(R, CL, n, beta);
     if (!isFinite(ratio)) throw new Error('calc error');
   } catch (e) { warn('값을 확인해주세요.'); return; }
+
   document.getElementById('t4_result').className = 'result-banner';
-  document.getElementById('t4_result').innerHTML =
-    '<div class="metric-grid"><div class="metric-card"><div class="m-label">시험시간비</div><div class="m-value">' + fmt(ratio, 4) + '</div></div></div>';
+  document.getElementById('t4_result').textContent =
+    '시험시간비 계산 완료 (R=' + R + ', CL=' + CL + ', n=' + n + ', β=' + beta + ')';
+
+  renderMetrics('t4_metrics', [
+    { label: '시험시간비', value: fmt(ratio, 4) },
+  ]);
+
+  drawT4Chart(R, CL, n, beta);
+
+  t4_last = { R, CL, n, beta, ratio };
+  updateT4SummaryAndSim();
 }
+var t4_last = null;
+var t4_simTouched = false;
+
+function updateT4SummaryAndSim() {
+  if (!t4_last) return;
+  const summaryCard = document.getElementById('t4_summaryCard');
+  const simCard = document.getElementById('t4_simCard');
+  summaryCard.style.display = '';
+  simCard.style.display = '';
+
+  const nSlider = document.getElementById('t4_sim_n');
+  if (!t4_simTouched) {
+    // 최초 진입 시에는 현재 입력한 n과 다른 값을 기본값으로 표시해
+    // 입력값(R, CL, beta 등) 변경 효과가 바로 체감되도록 함
+    if (nSlider) nSlider.value = String(Math.round(Math.min(60, Math.max(1, t4_last.n + 2))));
+  }
+
+  updateT4Simulation();
+}
+
+function updateT4Simulation() {
+  if (!t4_last) return;
+  const simN = parseFloat(document.getElementById('t4_sim_n').value);
+  document.getElementById('t4_sim_n_val').textContent = fmt(simN, 0);
+
+  const simRatio = weibullTestTimeRatio(t4_last.R, t4_last.CL, simN, t4_last.beta);
+  const saving = (1 - simRatio / t4_last.ratio) * 100;
+  document.getElementById('t4_sim_ratio').textContent = fmt(simRatio, 4);
+  document.getElementById('t4_sim_saving').textContent = (saving >= 0 ? fmt(saving,1) + ' 단축' : fmt(Math.abs(saving),1) + ' 증가');
+
+  const summary = document.getElementById('t4_summary');
+  if (summary) {
+    summary.innerHTML = '샘플수를 <strong>' + fmt(t4_last.n,0) + '개</strong>에서 <strong>' + fmt(simN,0) + '개</strong>로 조정하면 시험시간비는 ' +
+      '<strong>' + fmt(simRatio,4) + '</strong>가 되어, 기준 대비 <strong>' + (saving >= 0 ? fmt(saving,1) + '% 단축' : fmt(Math.abs(saving),1) + '% 증가') + '</strong>됩니다.';
+  }
+
+  if (typeof drawT4Chart === 'function') drawT4Chart(t4_last.R, t4_last.CL, t4_last.n, t4_last.beta, simN);
+}
+
 
 
 // ============================================================
@@ -1304,7 +1886,9 @@ function tab4Calculate() {
 // ============================================================
 var t5_rows = [];       // [{t, isFail}]
 var t5_fitResult = null; // {beta, eta}
+var t5_ciResult = null;  // {clPercent, ciBeta, ciEta, ciMttf, ciB10, ciB1}
 var t5_chart = null;
+var t1_chart = null, t2_chart = null, t3_chart = null, t4_chart = null;
 
 function tab5RenderTable() {
   const tbody = document.getElementById('t5_tbody');
@@ -1341,12 +1925,12 @@ function tab5LoadExample() {
   tab5RenderTable();
 }
 
-function tab5Fit() {
-  if (t5_rows.length < 3) { warn('데이터를 3개 이상 입력해주세요 (고장 데이터 2개 이상 포함).'); return; }
+function tab5Fit(isCLOnlyUpdate) {
+  if (!isCLOnlyUpdate && t5_rows.length < 3) { warn('데이터를 3개 이상 입력해주세요 (고장 데이터 2개 이상 포함).'); return; }
   const times = t5_rows.map(r => r.t);
   const isFailure = t5_rows.map(r => r.isFail);
   const nFail = isFailure.filter(Boolean).length;
-  if (nFail < 2) { warn('고장(Failure) 데이터가 2개 이상 필요합니다.'); return; }
+  if (!isCLOnlyUpdate && nFail < 2) { warn('고장(Failure) 데이터가 2개 이상 필요합니다.'); return; }
 
   const result = fitWeibullMLE(times, isFailure);
   if (!result) { warn('Weibull 적합에 실패했습니다. 데이터를 확인해주세요.'); return; }
@@ -1362,18 +1946,46 @@ function tab5Fit() {
   document.getElementById('t5_result').className = 'result-banner';
   document.getElementById('t5_result').textContent =
     '형상모수 β = ' + fmt(beta, 4) + '   척도모수 η = ' + fmt(eta, 2) + '\n' +
-    '(총 ' + nTotal + '개 데이터 : 고장 ' + nFail + '개 / 미고장 ' + (nTotal - nFail) + '개)\n' +
-    interp;
+    '(총 ' + nTotal + '개 데이터 : 고장 ' + nFail + '개 / 미고장 ' + (nTotal - nFail) + '개)';
 
   const mttf = weibullMTTF(beta, eta);
   const b10 = weibullBPercentile(beta, eta, 10);
   const b1 = weibullBPercentile(beta, eta, 1);
-  document.getElementById('t5_mttf').textContent =
-    'MTTF(평균수명)   = ' + fmt(mttf, 2) + '\n' +
-    'B10 수명(F=10%) = ' + fmt(b10, 2) + '\n' +
-    'B1 수명(F=1%)   = ' + fmt(b1, 2);
 
-  tab5DrawPlot(times, isFailure, beta, eta);
+  // --- 신뢰구간(CI) 계산 : Fisher Information Matrix 기반 근사 (delta method, 로그정규 근사) ---
+  let clInput = parseFloat(document.getElementById('t5_cl') ? document.getElementById('t5_cl').value : 90);
+  if (isNaN(clInput) || clInput <= 0 || clInput >= 100) clInput = 90;
+  const z = zFromCL(clInput);
+  const cov = weibullHessianCov(times, isFailure, beta, eta);
+  const ciBeta = cov ? { value: beta, lower: beta * Math.exp(-z * Math.sqrt(cov[0][0])), upper: beta * Math.exp(z * Math.sqrt(cov[0][0])) } : null;
+  const ciEta = cov ? { value: eta, lower: eta * Math.exp(-z * Math.sqrt(cov[1][1])), upper: eta * Math.exp(z * Math.sqrt(cov[1][1])) } : null;
+  const ciMttf = cov ? weibullDeltaCI(weibullMTTF, beta, eta, cov, z) : null;
+  const ciB10 = cov ? weibullDeltaCI((b, e) => weibullBPercentile(b, e, 10), beta, eta, cov, z) : null;
+  const ciB1 = cov ? weibullDeltaCI((b, e) => weibullBPercentile(b, e, 1), beta, eta, cov, z) : null;
+  t5_ciResult = { clPercent: clInput, ciBeta, ciEta, ciMttf, ciB10, ciB1 };
+
+  const clLabel = fmt(clInput, 0) + '%';
+  const ciSub = (ci) => ci ? (clLabel + ' CI: ' + fmt(ci.lower, 2) + ' ~ ' + fmt(ci.upper, 2)) : '(CI 계산 불가 - 데이터 부족)';
+
+  renderMetrics('t5_metrics', [
+    { label: '형상모수 β', value: fmt(beta, 4), sub: ciBeta ? (clLabel + ' CI: ' + fmt(ciBeta.lower, 4) + ' ~ ' + fmt(ciBeta.upper, 4)) : '(CI 계산 불가)' },
+    { label: '척도모수 η', value: fmt(eta, 2), sub: ciSub(ciEta) },
+    { label: 'MTTF(평균수명)', value: fmt(mttf, 2), sub: ciSub(ciMttf) },
+    { label: 'B10 수명(F=10%)', value: fmt(b10, 2), sub: ciSub(ciB10) },
+    { label: 'B1 수명(F=1%)', value: fmt(b1, 2), sub: ciSub(ciB1) },
+  ]);
+
+  const summaryCard = document.getElementById('t5_summaryCard');
+  const summary = document.getElementById('t5_summary');
+  if (summaryCard) summaryCard.style.display = '';
+  if (summary) {
+    let ciNote = cov
+      ? ('B10 수명의 ' + clLabel + ' 신뢰구간은 <b>' + fmt(ciB10 ? ciB10.lower : NaN, 1) + ' ~ ' + fmt(ciB10 ? ciB10.upper : NaN, 1) + '</b> 입니다. 표본이 적을수록 이 구간이 넓어지므로, 샘플수를 늘리면 추정 정확도를 높일 수 있습니다.')
+      : '현재 데이터로는 신뢰구간을 안정적으로 계산할 수 없습니다(고장 데이터가 더 필요합니다).';
+    summary.innerHTML = interp + '  (총 ' + nTotal + '개 중 고장 ' + nFail + '개 / 미고장 ' + (nTotal - nFail) + '개 데이터 기준)<br>' + ciNote;
+  }
+
+  tab5DrawPlot(times, isFailure, beta, eta, cov, z);
 }
 
 function tab5CalcRt() {
@@ -1390,7 +2002,7 @@ function tab5CalcRt() {
     'h(' + t + ') = ' + fmt(h, 6) + '   (t시점에서의 고장률)';
 }
 
-function tab5DrawPlot(times, isFailure, beta, eta) {
+function tab5DrawPlot(times, isFailure, beta, eta, cov, z) {
   const canvas = document.getElementById('weibullChart');
   if (t5_chart) { t5_chart.destroy(); t5_chart = null; }
 
@@ -1399,27 +2011,51 @@ function tab5DrawPlot(times, isFailure, beta, eta) {
 
   const tmin = Math.min(...times), tmax = Math.max(...times);
   const lineData = [];
+  const ciUpperData = [];
+  const ciLowerData = [];
+  const hasCI = !!(cov && z);
   for (let i = 0; i <= 50; i++) {
     const t = tmin > 0 ? tmin * Math.pow(tmax / tmin, i / 50.0) : tmax * i / 50.0;
-    if (t > 0) lineData.push({ x: Math.log(t), y: beta * (Math.log(t) - Math.log(eta)) });
+    if (t <= 0) continue;
+    const y = beta * (Math.log(t) - Math.log(eta));
+    lineData.push({ x: Math.log(t), y });
+    if (hasCI) {
+      // Fisher Matrix Bounds: y = ln(-ln(1-F)) = beta*(ln t - ln eta) 는 (logBeta, logEta)의 함수이므로
+      // 델타법으로 y의 분산을 직접 구해 y ± z*SE(y) 형태의 신뢰구간 밴드를 계산 (Weibull 확률도표 표준방식)
+      const dY_dLogBeta = y;      // dy/d(logBeta) = beta*(lnt-lneta) = y
+      const dY_dLogEta = -beta;   // dy/d(logEta) = -beta
+      const varY = dY_dLogBeta * dY_dLogBeta * cov[0][0] + dY_dLogEta * dY_dLogEta * cov[1][1] +
+                   2 * dY_dLogBeta * dY_dLogEta * cov[0][1];
+      if (varY >= 0 && isFinite(varY)) {
+        const seY = Math.sqrt(varY);
+        ciUpperData.push({ x: Math.log(t), y: y + z * seY });
+        ciLowerData.push({ x: Math.log(t), y: y - z * seY });
+      }
+    }
+  }
+
+  const datasets = [
+    { label: '관측 데이터(고장)', data: scatterData, backgroundColor: '#2f6fed', pointRadius: 5 },
+    { label: 'MLE 적합선 (β=' + beta.toFixed(2) + ', η=' + fmt(eta, 1) + ')',
+      data: lineData, type: 'line', borderColor: '#e2483a', backgroundColor: 'transparent',
+      pointRadius: 0, borderWidth: 2, showLine: true },
+  ];
+  if (hasCI && ciUpperData.length === lineData.length) {
+    datasets.push({ label: '신뢰구간 상한', data: ciUpperData, type: 'line', borderColor: 'rgba(226,72,58,0.55)',
+      backgroundColor: 'transparent', pointRadius: 0, borderWidth: 1.5, borderDash: [6, 4], showLine: true });
+    datasets.push({ label: '신뢰구간 하한', data: ciLowerData, type: 'line', borderColor: 'rgba(226,72,58,0.55)',
+      backgroundColor: 'transparent', pointRadius: 0, borderWidth: 1.5, borderDash: [6, 4], showLine: true });
   }
 
   t5_chart = new Chart(canvas, {
     type: 'scatter',
-    data: {
-      datasets: [
-        { label: '관측 데이터(고장)', data: scatterData, backgroundColor: '#2f6fed', pointRadius: 5 },
-        { label: 'MLE 적합선 (β=' + beta.toFixed(2) + ', η=' + fmt(eta, 1) + ')',
-          data: lineData, type: 'line', borderColor: '#e2483a', backgroundColor: 'transparent',
-          pointRadius: 0, borderWidth: 2, showLine: true },
-      ]
-    },
+    data: { datasets },
     options: {
       responsive: true,
-      plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } },
+      plugins: { legend: { display: false } },
       scales: {
-        x: { title: { display: true, text: 'ln(시간)' } },
-        y: { title: { display: true, text: 'ln(-ln(1-F))' } },
+        x: { title: { display: true, text: 'ln(시간)' }, grid: { color: 'rgba(148,163,184,0.10)' } },
+        y: { title: { display: true, text: 'ln(-ln(1-F))' }, grid: { color: 'rgba(148,163,184,0.10)' } },
       }
     }
   });
@@ -1436,11 +2072,21 @@ function tab5SendBetaToTab4() {
 function tab5ExportExcel() {
   if (!t5_fitResult) { warn('먼저 [Weibull 적합(MLE) 실행]을 눌러주세요.'); return; }
   const { beta, eta } = t5_fitResult;
+  const ci = t5_ciResult;
+  const clLabel = ci ? (fmt(ci.clPercent, 0) + '% CI') : '';
+  const ciRow = (c) => (ci && c) ? [fmt(c.lower, 4), fmt(c.upper, 4)] : ['-', '-'];
   const aoa = [
     ['형상모수 β', beta, '척도모수 η', eta],
     ['MTTF', weibullMTTF(beta, eta)],
     ['B10', weibullBPercentile(beta, eta, 10)],
     ['B1', weibullBPercentile(beta, eta, 1)],
+    [],
+    ['신뢰구간(' + (clLabel || 'CL 미계산') + ')', '하한', '상한'],
+    ['β', ...ciRow(ci && ci.ciBeta)],
+    ['η', ...ciRow(ci && ci.ciEta)],
+    ['MTTF', ...ciRow(ci && ci.ciMttf)],
+    ['B10', ...ciRow(ci && ci.ciB10)],
+    ['B1', ...ciRow(ci && ci.ciB1)],
     [],
     ['시간', '상태'],
   ];
@@ -1465,6 +2111,377 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.target === this) closeInfoModal();
   });
 });
+
+
+
+// ============================================================
+// 시각화: 온도(스트레스) -> 시험시간 변환 곡선
+// ============================================================
+
+function tempRangeAround(centerList, span) {
+  const lo = Math.min(...centerList) - span;
+  const hi = Math.max(...centerList) + span;
+  return [lo, hi];
+}
+
+function drawT1Chart(rows, Tref, E, simTemp) {
+  const card = document.getElementById('t1_chartCard');
+  card.style.display = '';
+  const ctx = document.getElementById('t1_chart').getContext('2d');
+  if (window.t1Chart && typeof window.t1Chart.destroy === 'function') window.t1Chart.destroy();
+
+  const base = rows && rows.length ? rows[0] : null;
+  if (!base) return;
+  const minT = Math.max(40, Math.floor(Math.min(base.ta, simTemp || base.ta) - 15));
+  const maxT = Math.min(200, Math.ceil(Math.max(base.ta, simTemp || base.ta) + 20));
+  const labels = [];
+  const curve = [];
+  for (let t = minT; t <= maxT; t += 2) {
+    labels.push(t);
+    curve.push(base.t / arrheniusAF(base.ta, t, E));
+  }
+  const currentHours = base.t;
+  const simHours = base.t / arrheniusAF(base.ta, simTemp || base.ta, E);
+
+  window.t1Chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: '재현 필요 시험시간(h)',
+          data: curve,
+          borderColor: '#2f6fed',
+          backgroundColor: 'rgba(47,111,237,0.10)',
+          fill: true,
+          tension: 0.28,
+          pointRadius: 0,
+          borderWidth: 3
+        },
+        {
+          label: '기준 조건',
+          data: labels.map(v => v === base.ta ? currentHours : null),
+          borderColor: '#ef4444',
+          backgroundColor: '#ef4444',
+          pointRadius: 5,
+          pointHoverRadius: 6,
+          showLine: false
+        },
+        {
+          label: '시뮬레이션 지점',
+          data: labels.map(v => v === Math.round(simTemp || base.ta) ? simHours : null),
+          borderColor: '#0ea5e9',
+          backgroundColor: '#0ea5e9',
+          pointRadius: 5,
+          pointHoverRadius: 6,
+          showLine: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const y = context.raw;
+              if (y == null) return '';
+              return context.dataset.label + ': ' + fmt(y, 1) + ' h';
+            }
+          }
+        }
+      },
+      scales: {
+        x: { title: { display: true, text: '시험온도 (℃)' }, grid: { color: 'rgba(148,163,184,0.10)' } },
+        y: { title: { display: true, text: '재현 필요 시험시간 (h)' }, grid: { color: 'rgba(148,163,184,0.10)' } }
+      }
+    }
+  });
+
+  const saving = (1 - simHours / currentHours) * 100;
+  document.getElementById('t1_chartNote').innerHTML =
+    '기준 조건 <strong>' + fmt(base.ta,1) + '℃ / ' + fmt(base.t,1) + 'h</strong>를 ' +
+    '<strong>' + fmt(simTemp || base.ta,1) + '℃</strong>에서 재현하려면 약 <strong>' + fmt(simHours,1) + 'h</strong>가 필요합니다. ' +
+    '즉, <strong>' + (saving >= 0 ? fmt(saving,1) + '% 단축' : fmt(Math.abs(saving),1) + '% 증가') + '</strong>입니다.';
+}
+
+function drawT2Chart(rows, Tu, Hu, E, n, simTa, simHa) {
+  const card = document.getElementById('t2_chartCard');
+  if (!rows || rows.length === 0) { card.style.display = 'none'; return; }
+  card.style.display = '';
+  const base = rows[0];
+  const haFixed = (simHa !== undefined && simHa !== null && !isNaN(simHa)) ? simHa : base.ha;
+  const [loTa, hiTa] = tempRangeAround([base.ta, simTa || base.ta], 20);
+  const labels = [];
+  const dataH = [];
+  for (let i = 0; i <= 40; i++) {
+    const ta = loTa + (hiTa - loTa) * i / 40;
+    const simHours = base.t / peckAF(base.ta, base.ha, ta, haFixed, E, n);
+    labels.push(ta.toFixed(0));
+    dataH.push(simHours);
+  }
+  const currentHours = base.t;
+  const simHours = base.t / peckAF(base.ta, base.ha, simTa || base.ta, haFixed, E, n);
+
+  if (t2_chart) { t2_chart.destroy(); t2_chart = null; }
+  const ctx = document.getElementById('t2_chart');
+  t2_chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: '재현 필요 시험시간(h)',
+          data: dataH,
+          borderColor: '#2f6fed',
+          backgroundColor: 'rgba(47,111,237,0.10)',
+          borderWidth: 3,
+          pointRadius: 0,
+          fill: true,
+          tension: 0.28,
+        },
+        {
+          label: '기준 조건',
+          data: labels.map(v => Math.round(parseFloat(v)) === Math.round(base.ta) ? currentHours : null),
+          borderColor: '#e2483a',
+          backgroundColor: '#e2483a',
+          pointRadius: 5,
+          pointHoverRadius: 6,
+          showLine: false,
+        },
+        {
+          label: '시뮬레이션 지점',
+          data: labels.map(v => Math.round(parseFloat(v)) === Math.round(simTa || base.ta) ? simHours : null),
+          borderColor: '#0ea5e9',
+          backgroundColor: '#0ea5e9',
+          pointRadius: 5,
+          pointHoverRadius: 6,
+          showLine: false,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const y = context.raw;
+              if (y == null) return '';
+              return context.dataset.label + ': ' + fmt(y, 1) + ' h';
+            }
+          }
+        }
+      },
+      scales: {
+        x: { title: { display: true, text: '가속온도 (℃, 습도 ' + haFixed.toFixed(0) + '%RH 고정)' }, grid: { color: 'rgba(148,163,184,0.10)' } },
+        y: { title: { display: true, text: '필요 시험시간 (h)' }, grid: { color: 'rgba(148,163,184,0.10)' } },
+      }
+    }
+  });
+
+  const saving = (1 - simHours / currentHours) * 100;
+  document.getElementById('t2_chartNote').innerHTML =
+    '기준 조건 <strong>' + fmt(base.ta,1) + '℃/' + fmt(base.ha,1) + '%RH / ' + fmt(base.t,1) + 'h</strong>를 ' +
+    '<strong>' + fmt(simTa || base.ta,1) + '℃/' + fmt(haFixed,1) + '%RH</strong>에서 재현하려면 약 <strong>' + fmt(simHours,1) + 'h</strong>가 필요합니다. ' +
+    '즉, <strong>' + (saving >= 0 ? fmt(saving,1) + '% 단축' : fmt(Math.abs(saving),1) + '% 증가') + '</strong>입니다.';
+}
+
+
+function drawT3Chart(model, field, test, m, simHigh) {
+  const card = document.getElementById('t3_chartCard');
+  card.style.display = '';
+  const dTField = Math.abs(field.high - field.low);
+  const targetCycle = field.target_cycle || 0;
+  const [loHigh, hiHigh] = tempRangeAround([test.high, simHigh || test.high], 30);
+  const labels = [];
+  const dataDay = [];
+  for (let i = 0; i <= 40; i++) {
+    const highT = loHigh + (hiHigh - loHigh) * i / 40;
+    const dTTest = Math.abs(highT - test.low);
+    const cycleTimeTest = profileCycleTimeMin(test.low_dwell, test.ramp_up, test.high_dwell, test.ramp_down);
+    let af;
+    if (model === 'coffin') {
+      af = coffinMansonAF(dTField, dTTest, m);
+    } else {
+      const rampTestRate = test.ramp_up > 0 ? (dTTest / test.ramp_up) : 0.0001;
+      af = norrisLandzbergAF(dTField, dTTest, field.high_dwell, test.high_dwell, rampTestRate, field.high, highT);
+    }
+    const needCycle = af > 0 ? targetCycle / af : NaN;
+    const totalDay = (needCycle * cycleTimeTest) / 60 / 24;
+    labels.push(highT.toFixed(0));
+    dataDay.push(totalDay);
+  }
+  const curTestDTTest = Math.abs(test.high - test.low);
+  const curCycleTime = profileCycleTimeMin(test.low_dwell, test.ramp_up, test.high_dwell, test.ramp_down);
+  let curAf;
+  if (model === 'coffin') {
+    curAf = coffinMansonAF(dTField, curTestDTTest, m);
+  } else {
+    const rampTestRate = test.ramp_up > 0 ? (curTestDTTest / test.ramp_up) : 0.0001;
+    curAf = norrisLandzbergAF(dTField, curTestDTTest, field.high_dwell, test.high_dwell, rampTestRate, field.high, test.high);
+  }
+  const curDay = ((curAf > 0 ? targetCycle / curAf : NaN) * curCycleTime) / 60 / 24;
+
+  const simHighVal = simHigh || test.high;
+  const simDTTest = Math.abs(simHighVal - test.low);
+  let simAf;
+  if (model === 'coffin') {
+    simAf = coffinMansonAF(dTField, simDTTest, m);
+  } else {
+    const rampTestRate = test.ramp_up > 0 ? (simDTTest / test.ramp_up) : 0.0001;
+    simAf = norrisLandzbergAF(dTField, simDTTest, field.high_dwell, test.high_dwell, rampTestRate, field.high, simHighVal);
+  }
+  const simDay = ((simAf > 0 ? targetCycle / simAf : NaN) * curCycleTime) / 60 / 24;
+
+  if (t3_chart) { t3_chart.destroy(); t3_chart = null; }
+  const ctx = document.getElementById('t3_chart');
+  t3_chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: '총 소요일수(일)',
+          data: dataDay,
+          borderColor: '#2f6fed',
+          backgroundColor: 'rgba(47,111,237,0.10)',
+          borderWidth: 3,
+          pointRadius: 0,
+          fill: true,
+          tension: 0.28,
+        },
+        {
+          label: '현재 입력값',
+          type: 'scatter',
+          data: [{ x: test.high, y: curDay }],
+          backgroundColor: '#e2483a',
+          borderColor: '#e2483a',
+          pointRadius: 6,
+          showLine: false,
+        },
+        {
+          label: '시뮬레이션 지점',
+          type: 'scatter',
+          data: [{ x: simHighVal, y: simDay }],
+          backgroundColor: '#0ea5e9',
+          borderColor: '#0ea5e9',
+          pointRadius: 6,
+          showLine: false,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const y = context.raw;
+              if (y == null) return '';
+              return context.dataset.label + ': ' + fmt(y, 2) + ' 일';
+            }
+          }
+        }
+      },
+      scales: {
+        x: { type: 'linear', title: { display: true, text: '시험 고온(High Temp) (℃)' }, grid: { color: 'rgba(148,163,184,0.10)' } },
+        y: { title: { display: true, text: '총 소요일수 (일)' }, beginAtZero: true, grid: { color: 'rgba(148,163,184,0.10)' } },
+      }
+    }
+  });
+  document.getElementById('t3_chartNote').innerHTML =
+    '※ 시험 저온/유지시간/승하강시간은 현재 입력값으로 고정하고, 시험 고온만 바꿔가며 필드 목표 사이클(' + targetCycle + 'cycle)을 만족하는데 필요한 총 소요일수를 계산한 곡선입니다. ' +
+    '<strong>' + fmt(simHighVal,1) + '℃</strong>에서는 약 <strong>' + fmt(simDay,2) + '일</strong>이 필요합니다. (고온을 올릴수록 ΔT가 커져 시험기간이 급격히 줄어듭니다)';
+}
+
+
+function drawT4Chart(R, CL, n, beta, simN) {
+  const card = document.getElementById('t4_chartCard');
+  card.style.display = '';
+  const nMax = Math.max(30, Math.max(n, simN || n) * 3);
+  const labels = [];
+  const dataRatio = [];
+  for (let ns = 1; ns <= nMax; ns++) {
+    const ratio = weibullTestTimeRatio(R, CL, ns, beta);
+    labels.push(ns);
+    dataRatio.push(ratio);
+  }
+  const curRatio = weibullTestTimeRatio(R, CL, n, beta);
+  const simRatio = weibullTestTimeRatio(R, CL, simN || n, beta);
+
+  if (t4_chart) { t4_chart.destroy(); t4_chart = null; }
+  const ctx = document.getElementById('t4_chart');
+  t4_chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: '시험시간비',
+          data: dataRatio,
+          borderColor: '#2f6fed',
+          backgroundColor: 'rgba(47,111,237,0.10)',
+          borderWidth: 3,
+          pointRadius: 0,
+          fill: true,
+          tension: 0.28,
+        },
+        {
+          label: '현재 입력값 (n=' + n + ')',
+          type: 'scatter',
+          data: [{ x: n, y: curRatio }],
+          backgroundColor: '#e2483a',
+          borderColor: '#e2483a',
+          pointRadius: 6,
+          showLine: false,
+        },
+        {
+          label: '시뮬레이션 지점',
+          type: 'scatter',
+          data: [{ x: simN || n, y: simRatio }],
+          backgroundColor: '#0ea5e9',
+          borderColor: '#0ea5e9',
+          pointRadius: 6,
+          showLine: false,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const y = context.raw;
+              if (y == null) return '';
+              return context.dataset.label + ': ' + fmt(y, 4);
+            }
+          }
+        }
+      },
+      scales: {
+        x: { type: 'linear', title: { display: true, text: '샘플수 n' }, grid: { color: 'rgba(148,163,184,0.10)' } },
+        y: { title: { display: true, text: '시험시간비' }, beginAtZero: true, grid: { color: 'rgba(148,163,184,0.10)' } },
+      }
+    }
+  });
+  document.getElementById('t4_chartNote').innerHTML =
+    '※ 신뢰도 R=' + R + ', 신뢰수준 CL=' + CL + ', β=' + beta + ' 조건에서, 샘플수(n)를 늘릴수록 시험시간비가 어떻게 줄어드는지 보여줍니다. ' +
+    'n=<strong>' + (simN || n) + '</strong>일 때 시험시간비는 <strong>' + fmt(simRatio,4) + '</strong>입니다. (샘플을 더 많이 투입하면 개별 시험시간은 줄어드는 트레이드오프)';
+}
 
 </script>
 </body>
